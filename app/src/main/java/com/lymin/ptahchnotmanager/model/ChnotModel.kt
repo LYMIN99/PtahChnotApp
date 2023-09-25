@@ -1,4 +1,4 @@
-package com.lymin.ptahchnot.model
+package com.lymin.ptahchnotmanager.model
 
 class ChnotModel {
     var date : String?

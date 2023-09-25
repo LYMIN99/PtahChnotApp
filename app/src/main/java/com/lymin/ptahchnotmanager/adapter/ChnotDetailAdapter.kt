@@ -1,12 +1,12 @@
-package com.lymin.ptahchnot.adapter
+package com.lymin.ptahchnotmanager.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.lymin.ptahchnot.model.ChnotDetailModel
-import com.lymin.ptahchnot.R
+import com.lymin.ptahchnotmanager.model.ChnotDetailModel
+import com.lymin.ptahchnotmanager.R
 
 class ChnotDetailAdapter(private val chnotDetailList: List<ChnotDetailModel>) : RecyclerView.Adapter<ChnotDetailAdapter.ChnotDetailViewHolder>() {
 

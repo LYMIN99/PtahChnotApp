@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -5,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.lymin.ptahchnot"
+    namespace = "com.lymin.ptahchnotmanager"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.lymin.ptahchnot"
+        applicationId = "com.lymin.ptahchnotmanager"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -34,6 +36,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {

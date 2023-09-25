@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PtahChnot</string>
+    <string name="post">បុស្តិ</string>
+    <string name="number">លេខឆ្នោត</string>
+    <string name="date">ថ្ងៃ</string>
+    <string name="time">ម៉ោង</string>
+    <string name="save">រួចរាល់</string>
+    <string name="add">បន្ថែម</string>
 </resources>

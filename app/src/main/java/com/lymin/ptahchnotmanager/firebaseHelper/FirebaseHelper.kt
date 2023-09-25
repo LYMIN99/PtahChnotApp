@@ -1,12 +1,14 @@
-package com.lymin.ptahchnot.firebaseHelper
+package com.lymin.ptahchnotmanager.firebaseHelper
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
-import com.lymin.ptahchnot.model.ChnotDetailModel
-import com.lymin.ptahchnot.model.ChnotModel
+import com.lymin.ptahchnotmanager.model.ChnotDetailModel
+import com.lymin.ptahchnotmanager.model.ChnotModel
+import com.lymin.ptahchnotmanager.model.PostModel
+import com.lymin.ptahchnotmanager.model.TimeModel
 
 class FirebaseHelper {
     companion object {
-        fun getData(oncallBack :OnGetDataallBack) {
+        fun getData(oncallBack : OnGetDataallBack) {
             val db = FirebaseFirestore.getInstance()
             val chnotsCollectionRef = db.collection("Chnots")
             val chnotList = mutableListOf<ChnotModel>()
@@ -60,7 +62,54 @@ class FirebaseHelper {
                 }
         }
     }
+    fun getTimes(oncallBack : OnGetTimesCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        val chnotsCollectionRef = db.collection("Times")
+        val list = mutableListOf<TimeModel>()
+        chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                // Get the ChnotModel data
+                val id = document.getString("id")
+                val time = document.getString("time")
+                list.add(TimeModel(id,time))
+            }
+            oncallBack.onSuccess(list)
+            // Now you have the list of ChnotModel data
+        }.addOnFailureListener { exception ->
+            // Handle errors while retrieving "Chnots" collection
+            oncallBack.onFailed()
+            Log.e("TAG", "getData: getTimes", exception)
+        }
+    }
 
+    fun getPosts(oncallBack : OnGetPostCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        val chnotsCollectionRef = db.collection("Posts")
+        val list = mutableListOf<PostModel>()
+        chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+            for (document in querySnapshot) {
+                // Get the ChnotModel data
+                val id = document.getString("id")
+                val time = document.getString("post")
+                list.add(PostModel(id,time))
+            }
+            oncallBack.onSuccess(list)
+            // Now you have the list of ChnotModel data
+        }.addOnFailureListener { exception ->
+            // Handle errors while retrieving "Chnots" collection
+            oncallBack.onFailed()
+            Log.e("TAG", "getData: Chnots", exception)
+        }
+    }
+
+    interface OnGetTimesCallBack {
+        fun onSuccess(list : MutableList<TimeModel>)
+        fun onFailed()
+    }
+    interface OnGetPostCallBack {
+        fun onSuccess(list : MutableList<PostModel>)
+        fun onFailed()
+    }
     interface OnGetDataallBack {
         fun onSuccess(list : MutableList<ChnotModel>)
         fun onFailed()

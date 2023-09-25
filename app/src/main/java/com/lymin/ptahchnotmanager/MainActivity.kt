@@ -1,14 +1,17 @@
-package com.lymin.ptahchnot
+package com.lymin.ptahchnotmanager
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.lymin.ptahchnot.adapter.ChnotAdapter
-import com.lymin.ptahchnot.firebaseHelper.FirebaseHelper
-import com.lymin.ptahchnot.model.ChnotModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.lymin.ptahchnotmanager.R
+import com.lymin.ptahchnotmanager.adapter.ChnotAdapter
+import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
+import com.lymin.ptahchnotmanager.model.ChnotModel
 
 class MainActivity : AppCompatActivity() {
     lateinit var recyclerView : RecyclerView
@@ -21,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         noDataLayout = findViewById(R.id.ln_no_data)
 
         getData()
+        findViewById<FloatingActionButton>(R.id.btn_add).setOnClickListener {
+            startActivity(Intent(this@MainActivity,AddDataActivity::class.java))
+        }
 
     }
 
