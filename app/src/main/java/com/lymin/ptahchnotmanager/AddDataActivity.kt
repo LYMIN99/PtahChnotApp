@@ -83,10 +83,8 @@ class AddDataActivity : AppCompatActivity() {
     }
 
     private fun saveToData() {
-        var listDetail : MutableList<ChnotDetailModel>
-        listDetail.addAll(listChnots)
 
-        var dataChnotModel = ChnotModel(tvDate.text.toString(),tvTime.text.toString(),listDetail)
+        var dataChnotModel = ChnotModel(tvDate.text.toString(),tvTime.text.toString(),listChnots)
     }
 
     private fun validated(): Boolean {
@@ -104,8 +102,6 @@ class AddDataActivity : AppCompatActivity() {
     private fun initializeData() {
         tvDate = findViewById(R.id.tv_date)
         tvTime = findViewById(R.id.tv_time)
-        tvPost = findViewById(R.id.tv_post)
-        edNumber = findViewById(R.id.ed_number)
 
         FirebaseHelper().getTimes(object : FirebaseHelper.OnGetTimesCallBack{
             override fun onSuccess(list: MutableList<TimeModel>) {
