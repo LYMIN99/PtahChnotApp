@@ -6,4 +6,7 @@
     <string name="time">ម៉ោង</string>
     <string name="save">រួចរាល់</string>
     <string name="add">បន្ថែម</string>
+    <string name="result_lottery">លទ្ធផលឆ្នោតទាំងអស់</string>
+    <string name="navigation_drawer_open">OPEN</string>
+    <string name="navigation_drawer_close">CLOSE</string>
 </resources>

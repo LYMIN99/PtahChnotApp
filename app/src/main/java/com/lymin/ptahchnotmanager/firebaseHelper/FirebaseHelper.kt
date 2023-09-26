@@ -1,6 +1,7 @@
 package com.lymin.ptahchnotmanager.firebaseHelper
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.getField
 import com.lymin.ptahchnotmanager.model.ChnotDetailModel
 import com.lymin.ptahchnotmanager.model.ChnotModel
 import com.lymin.ptahchnotmanager.model.PostModel
@@ -15,47 +16,11 @@ class FirebaseHelper {
             chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
                     for (document in querySnapshot) {
                         // Get the ChnotModel data
-                        val date = document.getString("date")
-                        val time = document.getString("time")
-
-                        // Get the sub-collection "details"
-                        val detailsCollectionRef = document.reference.collection("details")
-
-                        // Assuming you have a class to represent your ChnotDetailModel
-                        // (replace YourChnotDetailModelClass with your actual class name)
-                        val detailsList = mutableListOf<ChnotDetailModel>()
-
-                        // Retrieve data from the "details" sub-collection
-                        detailsCollectionRef.get()
-                            .addOnSuccessListener { detailsQuerySnapshot ->
-                                for (detailDocument in detailsQuerySnapshot) {
-                                    val post = detailDocument.getString("post")
-                                    val number2 = detailDocument.getString("number2")
-                                    val number3 = detailDocument.getString("number3")
-                                    val number4 = detailDocument.getString("number4")
-
-                                    // Create a ChnotDetailModel instance and add it to the list
-                                    val detailModel = ChnotDetailModel(post, number2,number3,number4)
-                                    detailsList.add(detailModel)
-                                }
-
-                                // Create a ChnotModel instance with details and add it to the list
-                                val chnotModel = ChnotModel(date, time, detailsList)
-                                chnotList.add(chnotModel)
-
-                                Log.d("TAG", "getData: Success ${chnotList.size}")
-
-                                // Now you have the ChnotModel data with details
-                                oncallBack.onSuccess(chnotList)
-                            }
-                            .addOnFailureListener { exception ->
-                                // Handle errors while retrieving "details" sub-collection
-                                Log.e("TAG", "getData: details", exception)
-                                oncallBack.onFailed()
-                            }
+                        val dataChnotModel = document.toObject(ChnotModel::class.java)
+                        chnotList.add(dataChnotModel)
                     }
-
                     // Now you have the list of ChnotModel data
+                oncallBack.onSuccess(chnotList)
                 }
                 .addOnFailureListener { exception ->
                     // Handle errors while retrieving "Chnots" collection
@@ -104,6 +69,30 @@ class FirebaseHelper {
         }
     }
 
+    fun saveToFirestore(chnotModel: ChnotModel, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        // Get a reference to the "Chnots" collection
+        val chnotsCollection = db.collection("Chnots")
+
+        // Add a new document to the "Chnots" collection
+        chnotsCollection
+            .add(chnotModel)
+            .addOnSuccessListener { documentReference ->
+                // The data was successfully written to Firestore
+                // You can do something here if the upload is successful
+                val documentId = documentReference.id
+                // Log success or navigate to another screen
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occurred during the upload
+                Log.e("Firestore", "Error adding document", e)
+                // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
+
+
     interface OnGetTimesCallBack {
         fun onSuccess(list : MutableList<TimeModel>)
         fun onFailed()
@@ -114,6 +103,11 @@ class FirebaseHelper {
     }
     interface OnGetDataallBack {
         fun onSuccess(list : MutableList<ChnotModel>)
+        fun onFailed()
+    }
+
+    interface OnUploadCallBack {
+        fun onSuccess()
         fun onFailed()
     }
 }

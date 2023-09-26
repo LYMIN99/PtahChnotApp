@@ -116,7 +116,17 @@ class AddDataActivity : AppCompatActivity() {
 
     private fun saveToData() {
 
-        var dataChnotModel = ChnotModel(tvDate.text.toString(),tvTime.text.toString(),listChnots)
+        val dataChnotModel = ChnotModel(tvDate.text.toString(),tvTime.text.toString(),listChnots)
+        FirebaseHelper().saveToFirestore(dataChnotModel,object : FirebaseHelper.OnUploadCallBack{
+            override fun onSuccess() {
+                Toast.makeText(this@AddDataActivity,"Upload Success",Toast.LENGTH_SHORT).show()
+                finish()
+            }
+
+            override fun onFailed() {
+                Toast.makeText(this@AddDataActivity,"Upload Error",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 
     private fun validated(): Boolean {

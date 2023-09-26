@@ -9,13 +9,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="30dp"
         android:textColor="#3F51B5"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
         android:text="A"/>
 
     <TextView
-        android:id="@+id/tv_number"
+        android:id="@+id/tv_number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8C0A00"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:text="10 123 234"/>
+    <TextView
+        android:id="@+id/tv_number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8C0A00"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:text="10 123 234"/>
+    <TextView
+        android:id="@+id/tv_number4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#8C0A00"
