@@ -30,10 +30,12 @@ class FirebaseHelper {
                             .addOnSuccessListener { detailsQuerySnapshot ->
                                 for (detailDocument in detailsQuerySnapshot) {
                                     val post = detailDocument.getString("post")
-                                    val number = detailDocument.getString("number")
+                                    val number2 = detailDocument.getString("number2")
+                                    val number3 = detailDocument.getString("number3")
+                                    val number4 = detailDocument.getString("number4")
 
                                     // Create a ChnotDetailModel instance and add it to the list
-                                    val detailModel = ChnotDetailModel(post, number)
+                                    val detailModel = ChnotDetailModel(post, number2,number3,number4)
                                     detailsList.add(detailModel)
                                 }
 

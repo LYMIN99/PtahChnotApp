@@ -54,7 +54,7 @@ class DialogPickDate(private val context: Context, private val onCallBack: OnCal
                     val month =
                         if (monthOfYear + 1 < 10) "0" + (monthOfYear + 1) else (monthOfYear + 1).toString() + ""
                     val day = if (dayOfMonth < 10) "0$dayOfMonth" else dayOfMonth.toString() + ""
-                    date[0] = "$year-$month-$day"
+                    date[0] = "$day/$month/$year"
                 }
             })
         } else {
@@ -70,7 +70,7 @@ class DialogPickDate(private val context: Context, private val onCallBack: OnCal
                     val monthx =
                         if (month + 1 < 10) "0" + (month + 1) else (month + 1).toString() + ""
                     val day = if (dayOfMonth < 10) "0$dayOfMonth" else dayOfMonth.toString() + ""
-                    date[0] = "$year-$monthx-$day"
+                    date[0] = "$day/$monthx/$year"
 
                     //    date[0] = dayOfMonth+"/"+(month+1)+"/"+year;;
                     //date[0] = year + "-" + (month + 1) + "-" + dayOfMonth;

@@ -23,7 +23,7 @@ class ChnotDetailAdapter(private val chnotDetailList: List<ChnotDetailModel>) : 
     override fun onBindViewHolder(holder: ChnotDetailViewHolder, position: Int) {
         val chnotDetailItem = chnotDetailList[position]
         holder.post.text = chnotDetailItem.post
-        holder.number.text = chnotDetailItem.number.toString()
+        holder.number.text = chnotDetailItem.number2.toString()
     }
 
     override fun getItemCount(): Int {

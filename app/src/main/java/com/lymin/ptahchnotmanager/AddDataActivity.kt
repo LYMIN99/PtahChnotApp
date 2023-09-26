@@ -1,16 +1,17 @@
 package com.lymin.ptahchnotmanager
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import android.widget.Toolbar
-import com.google.android.material.appbar.AppBarLayout
+import androidx.recyclerview.widget.RecyclerView
+import com.lymin.ptahchnotmanager.adapter.ChnotDetailAddAdapter
+import com.lymin.ptahchnotmanager.dialog.DialogAddChnot
 import com.lymin.ptahchnotmanager.dialog.DialogPickDate
-import com.lymin.ptahchnotmanager.dialog.DialogSelectPost
 import com.lymin.ptahchnotmanager.dialog.DialogSelectTime
+import com.lymin.ptahchnotmanager.dialog.DialogUpdateChnot
 import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
 import com.lymin.ptahchnotmanager.model.ChnotDetailModel
 import com.lymin.ptahchnotmanager.model.ChnotModel
@@ -23,6 +24,30 @@ class AddDataActivity : AppCompatActivity() {
     val listTimes = mutableListOf<TimeModel>()
     val listPosts = mutableListOf<PostModel>()
     val listChnots = mutableListOf<ChnotDetailModel>()
+    lateinit var recyclerView: RecyclerView
+
+    val adapter = ChnotDetailAddAdapter(listChnots,object : ChnotDetailAddAdapter.OnCallBack{
+        override fun onEdit(itemOld: ChnotDetailModel?, position: Int) {
+            DialogUpdateChnot(this@AddDataActivity,listPosts,itemOld,object : DialogUpdateChnot.OnCallBack{
+                @SuppressLint("NotifyDataSetChanged")
+                override fun onConfirmClick(itemUpdate: ChnotDetailModel?) {
+                    if (itemUpdate != null) {
+                        listChnots.remove(itemOld)
+                        listChnots.add(position,itemUpdate)
+                        recyclerView.adapter!!.notifyDataSetChanged()
+                        //adapter.notifyDataSetChanged()
+                    }
+                }
+            })
+        }
+
+        override fun onDelete(item: ChnotDetailModel?, position: Int) {
+            listChnots.remove(item)
+
+            //recyclerView.adapter.notifyDataSetChanged()
+        }
+    })
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_data)
@@ -70,7 +95,14 @@ class AddDataActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btn_add_more).setOnClickListener {
-
+            DialogAddChnot(this@AddDataActivity,listPosts,object : DialogAddChnot.OnCallBack{
+                override fun onConfirmClick(item: ChnotDetailModel?) {
+                    if (item != null) {
+                        listChnots.add(item)
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+            })
         }
 
         findViewById<Button>(R.id.btn_save).setOnClickListener {
@@ -120,5 +152,9 @@ class AddDataActivity : AppCompatActivity() {
             override fun onFailed() {
             }
         })
+
+        recyclerView = findViewById(R.id.recycler_view)
+        recyclerView.adapter = adapter
+
     }
 }
