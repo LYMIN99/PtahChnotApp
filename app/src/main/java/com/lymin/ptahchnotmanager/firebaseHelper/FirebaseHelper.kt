@@ -4,6 +4,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.lymin.ptahchnotmanager.model.ChnotModel
 import com.lymin.ptahchnotmanager.model.PostModel
 import com.lymin.ptahchnotmanager.model.TimeModel
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class FirebaseHelper {
     companion object {
@@ -26,7 +28,40 @@ class FirebaseHelper {
                     oncallBack.onFailed()
                 }
         }
+
+        fun getDataYesterday(oncallBack : OnGetDataallBack) {
+            val db = FirebaseFirestore.getInstance()
+            val chnotsCollectionRef = db.collection("Chnots")
+            val chnotList = mutableListOf<ChnotModel>()
+
+            val currentDate = LocalDate.now()
+            val yesterday = currentDate.minusDays(1)
+            val date = LocalDate.of(currentDate.year, currentDate.month, yesterday.dayOfMonth)
+            // Define a custom date format
+            val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+
+            Log.d("TAG", "getDataYesterday: $formatter")
+            // Format the date using the formatter
+            val formattedDate = date.format(formatter)
+
+            chnotsCollectionRef.whereEqualTo("date",formattedDate).get().addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot) {
+                    // Get the ChnotModel data
+                    val dataChnotModel = document.toObject(ChnotModel::class.java)
+                    chnotList.add(dataChnotModel)
+                }
+                // Now you have the list of ChnotModel data
+                oncallBack.onSuccess(chnotList)
+            }
+                .addOnFailureListener { exception ->
+                    // Handle errors while retrieving "Chnots" collection
+                    Log.e("TAG", "getData: Chnots", exception)
+                    oncallBack.onFailed()
+                }
+        }
     }
+
+
     fun getTimes(oncallBack : OnGetTimesCallBack) {
         val db = FirebaseFirestore.getInstance()
         val chnotsCollectionRef = db.collection("Times")

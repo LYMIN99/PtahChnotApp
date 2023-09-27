@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData() {
-       FirebaseHelper.getData(object  : FirebaseHelper.OnGetDataallBack{
+       FirebaseHelper.getDataYesterday(object  : FirebaseHelper.OnGetDataallBack{
             override fun onSuccess(list: MutableList<ChnotModel>) {
                 Log.d("TAG", "getData: ${list.size}")
                 val adapter = ChnotAdapter(list)
