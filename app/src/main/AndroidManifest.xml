@@ -18,6 +18,9 @@
             android:name=".activities.PostsActivity"
             android:exported="false" />
         <activity
+            android:name=".activities.TimesActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddDataActivity"
             android:exported="false" />
         <activity

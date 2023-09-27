@@ -34,7 +34,7 @@ class DialogTime(private val context: Context, private val oldData : TimeModel?,
     private fun initialize() {
         val dialog = Dialog(context)
         dialog.requestWindowFeature(Window.FEATURE_ACTION_BAR)
-        dialog.setContentView(R.layout.dialog_post)
+        dialog.setContentView(R.layout.dialog_time)
         Objects.requireNonNull(dialog.window)!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setCancelable(true)
         val lp = WindowManager.LayoutParams()

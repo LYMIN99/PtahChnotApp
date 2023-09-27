@@ -15,6 +15,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.lymin.ptahchnotmanager.R
 import com.lymin.ptahchnotmanager.activities.PostsActivity
+import com.lymin.ptahchnotmanager.activities.TimesActivity
 import com.lymin.ptahchnotmanager.adapter.ChnotAdapter
 import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
 import com.lymin.ptahchnotmanager.model.ChnotModel
@@ -76,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         nav_view.findViewById<View>(R.id.ln_time).setOnClickListener {
-         //   startActivity(Intent(this@MainActivity, DataSubmittingTabsActivity::class.java))
+            startActivity(Intent(this@MainActivity, TimesActivity::class.java))
             drawer.closeDrawers()
         }
     }
