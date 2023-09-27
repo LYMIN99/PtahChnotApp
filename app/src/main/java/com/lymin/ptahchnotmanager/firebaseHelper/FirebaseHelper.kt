@@ -70,22 +70,37 @@ class FirebaseHelper {
     fun saveLotteryToFirestore(chnotModel: ChnotModel, oncallBack : OnUploadCallBack) {
         val db = FirebaseFirestore.getInstance()
         // Get a reference to the "Chnots" collection
-        val chnotsCollection = db.collection("Chnots")
+        val chnotsCollection = db.collection("Chnots").document(chnotModel.id.toString())
 
         // Add a new document to the "Chnots" collection
         chnotsCollection
-            .add(chnotModel)
+            .set(chnotModel)
             .addOnSuccessListener { documentReference ->
-                // The data was successfully written to Firestore
-                // You can do something here if the upload is successful
-                val documentId = documentReference.id
-                // Log success or navigate to another screen
                 oncallBack.onSuccess()
             }
             .addOnFailureListener { e ->
                 // Handle any errors that occurred during the upload
                 Log.e("Firestore", "Error adding document", e)
                 // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
+
+    fun updateLotteryToFirestore(chnotModel: ChnotModel, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        val chnotsCollection = db.collection("Chnots")
+
+        // Get the document reference using the ChnotModel's ID
+        val chnotDocumentRef = chnotsCollection.document(chnotModel.id.toString())
+
+        // Update the document with the new data
+        chnotDocumentRef.set(chnotModel)
+            .addOnSuccessListener {
+                // Document updated successfully
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener {
+                // Handle the error
                 oncallBack.onFailed()
             }
     }

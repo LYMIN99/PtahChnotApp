@@ -22,6 +22,7 @@ import com.lymin.ptahchnotmanager.model.ChnotDetailModel
 import com.lymin.ptahchnotmanager.model.PostModel
 import com.lymin.ptahchnotmanager.model.TimeModel
 import java.util.Objects
+import java.util.UUID
 
 class DialogAddChnot(private val context: Context, private val list : List<PostModel>, private val onCallBack: OnCallBack) {
     init {
@@ -68,7 +69,8 @@ class DialogAddChnot(private val context: Context, private val list : List<PostM
                 return@setOnClickListener
             }
 
-            val item = ChnotDetailModel(tvPost.text.toString(),edNumber2.text.toString(),edNumber3.text.toString(),edNumber4.text.toString())
+            val id = UUID.randomUUID().toString()
+            val item = ChnotDetailModel(id,tvPost.text.toString(),edNumber2.text.toString(),edNumber3.text.toString(),edNumber4.text.toString())
             onCallBack.onConfirmClick(item)
             dialog.dismiss()
         }

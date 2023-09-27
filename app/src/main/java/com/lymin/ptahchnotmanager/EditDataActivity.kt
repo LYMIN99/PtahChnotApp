@@ -19,17 +19,18 @@ import com.lymin.ptahchnotmanager.model.PostModel
 import com.lymin.ptahchnotmanager.model.TimeModel
 import java.util.UUID
 
-class AddDataActivity : AppCompatActivity() {
+class EditDataActivity : AppCompatActivity() {
     lateinit var tvDate : TextView
     lateinit var tvTime : TextView
     val listTimes = mutableListOf<TimeModel>()
     val listPosts = mutableListOf<PostModel>()
     val listChnots = mutableListOf<ChnotDetailModel>()
+    var idLottery : String = "null"
     lateinit var recyclerView: RecyclerView
 
     val adapter = ChnotDetailAddAdapter(listChnots,object : ChnotDetailAddAdapter.OnCallBack{
         override fun onEdit(itemOld: ChnotDetailModel?, position: Int) {
-            DialogUpdateChnot(this@AddDataActivity,listPosts,itemOld,object : DialogUpdateChnot.OnCallBack{
+            DialogUpdateChnot(this@EditDataActivity,listPosts,itemOld,object : DialogUpdateChnot.OnCallBack{
                 @SuppressLint("NotifyDataSetChanged")
                 override fun onConfirmClick(itemUpdate: ChnotDetailModel?) {
                     if (itemUpdate != null) {
@@ -60,6 +61,7 @@ class AddDataActivity : AppCompatActivity() {
 
     private fun initToolBar() {
         val toolbar : androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
+        toolbar.title = "កែប្រែ"
        // var appbar : AppBarLayout = findViewById(R.id.appbar)
 
         setSupportActionBar(toolbar)
@@ -79,7 +81,7 @@ class AddDataActivity : AppCompatActivity() {
 
     private fun initClick() {
         tvDate.setOnClickListener {
-            DialogPickDate(this@AddDataActivity,object : DialogPickDate.OnCallBack{
+            DialogPickDate(this@EditDataActivity,object : DialogPickDate.OnCallBack{
                 override fun onConfirmClick(value: String?) {
                     tvDate.text = value
                 }
@@ -97,7 +99,7 @@ class AddDataActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btn_add_more).setOnClickListener {
-            DialogAddChnot(this@AddDataActivity,listPosts,object : DialogAddChnot.OnCallBack{
+            DialogAddChnot(this@EditDataActivity,listPosts,object : DialogAddChnot.OnCallBack{
                 override fun onConfirmClick(item: ChnotDetailModel?) {
                     if (item != null) {
                         listChnots.add(item)
@@ -111,22 +113,22 @@ class AddDataActivity : AppCompatActivity() {
             if (validated()){
                 saveToData()
             } else {
-                Toast.makeText(this@AddDataActivity,"Please add all information first",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@EditDataActivity,"Please add all information first",Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun saveToData() {
-        val id = UUID.randomUUID().toString()
-        val dataChnotModel = ChnotModel(id,tvDate.text.toString(),tvTime.text.toString(),listChnots)
-        FirebaseHelper().saveLotteryToFirestore(dataChnotModel,object : FirebaseHelper.OnUploadCallBack{
+
+        val dataChnotModel = ChnotModel(idLottery,tvDate.text.toString(),tvTime.text.toString(),listChnots)
+        FirebaseHelper().updateLotteryToFirestore(dataChnotModel,object : FirebaseHelper.OnUploadCallBack{
             override fun onSuccess() {
-                Toast.makeText(this@AddDataActivity,"Upload Success",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@EditDataActivity,"Upload Success",Toast.LENGTH_SHORT).show()
                 finish()
             }
 
             override fun onFailed() {
-                Toast.makeText(this@AddDataActivity,"Upload Error",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@EditDataActivity,"Upload Error",Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -167,6 +169,17 @@ class AddDataActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView.adapter = adapter
+
+        val chnotDetailItem = intent.getParcelableExtra<ChnotModel>("chnotDetailItem")
+
+        if (chnotDetailItem!=null){
+            idLottery = chnotDetailItem.id.toString()
+            tvDate.text = chnotDetailItem.date
+            tvTime.text = chnotDetailItem.time
+
+            listChnots.addAll(chnotDetailItem.details)
+            adapter.notifyDataSetChanged()
+        }
 
     }
 }

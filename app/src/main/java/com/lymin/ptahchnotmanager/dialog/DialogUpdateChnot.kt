@@ -72,9 +72,20 @@ class DialogUpdateChnot(
                 return@setOnClickListener
             }
 
-            val item = ChnotDetailModel(tvPost.text.toString(),edNumber2.text.toString(),edNumber3.text.toString(),edNumber4.text.toString())
-            onCallBack.onConfirmClick(item)
-            dialog.dismiss()
+            if (item!=null) {
+                val itemX = ChnotDetailModel(
+                    item.id,
+                    tvPost.text.toString(),
+                    edNumber2.text.toString(),
+                    edNumber3.text.toString(),
+                    edNumber4.text.toString()
+                )
+                onCallBack.onConfirmClick(itemX)
+                dialog.dismiss()
+            } else {
+                Toast.makeText(context,"Error Update",Toast.LENGTH_SHORT).show()
+                dialog.dismiss()
+            }
         }
 
         dialog.show()
