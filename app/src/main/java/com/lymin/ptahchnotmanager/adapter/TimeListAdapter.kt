@@ -9,8 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.lymin.ptahchnotmanager.R
 import com.lymin.ptahchnotmanager.model.ChnotDetailModel
 import com.lymin.ptahchnotmanager.model.PostModel
+import com.lymin.ptahchnotmanager.model.TimeModel
 
-class PostListAdapter(private val list: List<PostModel>, private val onCallBack: OnCallBack) : RecyclerView.Adapter<PostListAdapter.ChnotDetailViewHolder>() {
+class TimeListAdapter(private val list: List<TimeModel>, private val onCallBack: OnCallBack) : RecyclerView.Adapter<TimeListAdapter.ChnotDetailViewHolder>() {
 
 
     inner class ChnotDetailViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -26,16 +27,16 @@ class PostListAdapter(private val list: List<PostModel>, private val onCallBack:
     }
 
     override fun onBindViewHolder(holder: ChnotDetailViewHolder, position: Int) {
-        val chnotDetailItem = list[position]
-        holder.name.text = chnotDetailItem.post
+        val item = list[position]
+        holder.name.text = item.time
 
 
         holder.btnEdit.setOnClickListener {
-            onCallBack.onEdit(chnotDetailItem,position)
+            onCallBack.onEdit(item,position)
         }
 
         holder.btnDelete.setOnClickListener {
-            onCallBack.onDelete(chnotDetailItem,position)
+            onCallBack.onDelete(item,position)
             notifyDataSetChanged()
         }
     }
@@ -45,7 +46,7 @@ class PostListAdapter(private val list: List<PostModel>, private val onCallBack:
     }
 
     interface OnCallBack {
-        fun onEdit(item: PostModel?,position: Int)
-        fun onDelete(item: PostModel?,position: Int)
+        fun onEdit(item: TimeModel?,position: Int)
+        fun onDelete(item: TimeModel?,position: Int)
     }
 }

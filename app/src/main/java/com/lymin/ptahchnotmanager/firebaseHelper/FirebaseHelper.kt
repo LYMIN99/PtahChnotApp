@@ -1,8 +1,6 @@
 package com.lymin.ptahchnotmanager.firebaseHelper
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.getField
-import com.lymin.ptahchnotmanager.model.ChnotDetailModel
 import com.lymin.ptahchnotmanager.model.ChnotModel
 import com.lymin.ptahchnotmanager.model.PostModel
 import com.lymin.ptahchnotmanager.model.TimeModel
@@ -69,7 +67,7 @@ class FirebaseHelper {
         }
     }
 
-    fun saveToFirestore(chnotModel: ChnotModel, oncallBack : OnUploadCallBack) {
+    fun saveLotteryToFirestore(chnotModel: ChnotModel, oncallBack : OnUploadCallBack) {
         val db = FirebaseFirestore.getInstance()
         // Get a reference to the "Chnots" collection
         val chnotsCollection = db.collection("Chnots")
@@ -92,6 +90,77 @@ class FirebaseHelper {
             }
     }
 
+    fun savePostToFirestore(dataList: List<PostModel>, oncallBack: OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        val dataCollection = db.collection("Posts")
+
+        // Step 1: Query and delete old data
+        dataCollection.get()
+            .addOnSuccessListener { querySnapshot ->
+                val batch = db.batch()
+
+                // Step 2: Delete old data
+                for (document in querySnapshot.documents) {
+                    batch.delete(document.reference)
+                }
+
+                // Step 3: Add new data
+                for (post in dataList) {
+                    val newDocumentRef = dataCollection.document()
+                    batch.set(newDocumentRef, post) // Assuming you have a toMap() function
+                }
+
+                // Commit the batch operation
+                batch.commit()
+                    .addOnSuccessListener {
+                        oncallBack.onSuccess()
+                    }
+                    .addOnFailureListener { e ->
+                        Log.e("Firestore", "Error committing batch", e)
+                        oncallBack.onFailed()
+                    }
+            }
+            .addOnFailureListener { e ->
+                Log.e("Firestore", "Error querying old data", e)
+                oncallBack.onFailed()
+            }
+    }
+
+    fun saveTimeToFirestore(dataList: List<TimeModel>, oncallBack: OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        val dataCollection = db.collection("Times")
+
+        // Step 1: Query and delete old data
+        dataCollection.get()
+            .addOnSuccessListener { querySnapshot ->
+                val batch = db.batch()
+
+                // Step 2: Delete old data
+                for (document in querySnapshot.documents) {
+                    batch.delete(document.reference)
+                }
+
+                // Step 3: Add new data
+                for (post in dataList) {
+                    val newDocumentRef = dataCollection.document()
+                    batch.set(newDocumentRef, post) // Assuming you have a toMap() function
+                }
+
+                // Commit the batch operation
+                batch.commit()
+                    .addOnSuccessListener {
+                        oncallBack.onSuccess()
+                    }
+                    .addOnFailureListener { e ->
+                        Log.e("Firestore", "Error committing batch", e)
+                        oncallBack.onFailed()
+                    }
+            }
+            .addOnFailureListener { e ->
+                Log.e("Firestore", "Error querying old data", e)
+                oncallBack.onFailed()
+            }
+    }
 
     interface OnGetTimesCallBack {
         fun onSuccess(list : MutableList<TimeModel>)

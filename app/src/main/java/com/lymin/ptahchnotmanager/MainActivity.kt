@@ -14,9 +14,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.lymin.ptahchnotmanager.R
+import com.lymin.ptahchnotmanager.activities.PostsActivity
 import com.lymin.ptahchnotmanager.adapter.ChnotAdapter
 import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
 import com.lymin.ptahchnotmanager.model.ChnotModel
+import com.lymin.ptahchnotmanager.model.PostModel
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -69,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             drawer.closeDrawers()
         }
         nav_view.findViewById<View>(R.id.ln_post).setOnClickListener {
-          //  startActivity(Intent(this@MainActivity, SettingActivity::class.java))
+            startActivity(Intent(this@MainActivity, PostsActivity::class.java))
             drawer.closeDrawers()
         }
 

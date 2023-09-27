@@ -117,7 +117,7 @@ class AddDataActivity : AppCompatActivity() {
     private fun saveToData() {
 
         val dataChnotModel = ChnotModel(tvDate.text.toString(),tvTime.text.toString(),listChnots)
-        FirebaseHelper().saveToFirestore(dataChnotModel,object : FirebaseHelper.OnUploadCallBack{
+        FirebaseHelper().saveLotteryToFirestore(dataChnotModel,object : FirebaseHelper.OnUploadCallBack{
             override fun onSuccess() {
                 Toast.makeText(this@AddDataActivity,"Upload Success",Toast.LENGTH_SHORT).show()
                 finish()
