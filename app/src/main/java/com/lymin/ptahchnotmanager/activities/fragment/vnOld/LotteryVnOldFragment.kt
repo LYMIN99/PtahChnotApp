@@ -1,11 +1,14 @@
 package com.lymin.ptahchnotmanager.activities.fragment.vnOld
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.lymin.ptahchnotmanager.AddDataActivity
 import com.lymin.ptahchnotmanager.R
 import com.lymin.ptahchnotmanager.databinding.FragmentLotteryVnOldBinding
 
@@ -47,7 +50,9 @@ class LotteryVnOldFragment : Fragment() {
 //        // Optional: Specify the lifecycle owner to observe LiveData
 //        binding.lifecycleOwner = this
 
-
+        binding.btnEdit1.setOnClickListener {
+            startActivity(Intent(context, LotteryVN1Activity::class.java))
+        }
         return binding.root
     }
 

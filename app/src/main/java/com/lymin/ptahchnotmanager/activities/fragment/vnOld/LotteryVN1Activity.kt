@@ -2,10 +2,12 @@ package com.lymin.ptahchnotmanager.activities.fragment.vnOld
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.lymin.ptahchnotmanager.R
 import com.lymin.ptahchnotmanager.databinding.ActivityLotteryVn1Binding
 import com.lymin.ptahchnotmanager.databinding.ActivityMainBinding
+import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
 import com.lymin.ptahchnotmanager.model.LotteryVN1Model
 import java.util.UUID
 
@@ -22,13 +24,14 @@ class LotteryVN1Activity : AppCompatActivity() {
     }
 
     private fun initClick() {
-        binding!!.btnSave.setOnClickListener {
+        binding.btnSave.setOnClickListener {
             saveData()
         }
     }
 
     private fun saveData() {
         val id = UUID.randomUUID().toString()
+
         var data = LotteryVN1Model(
             id,
             binding.tvDate.text.toString(),
@@ -74,5 +77,16 @@ class LotteryVN1Activity : AppCompatActivity() {
             binding.lod2.text.toString(),
             binding.lod3.text.toString(),
         )
+
+        FirebaseHelper().saveLotteryVn1ToFirestore(data,object : FirebaseHelper.OnUploadCallBack{
+            override fun onSuccess() {
+                Toast.makeText(this@LotteryVN1Activity,"Upload Success", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+
+            override fun onFailed() {
+                Toast.makeText(this@LotteryVN1Activity,"Upload Error", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }

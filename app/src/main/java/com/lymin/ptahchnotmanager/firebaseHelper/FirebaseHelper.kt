@@ -2,6 +2,7 @@ package com.lymin.ptahchnotmanager.firebaseHelper
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.lymin.ptahchnotmanager.model.ChnotModel
+import com.lymin.ptahchnotmanager.model.LotteryVN1Model
 import com.lymin.ptahchnotmanager.model.PostModel
 import com.lymin.ptahchnotmanager.model.TimeModel
 import java.time.LocalDate
@@ -120,6 +121,26 @@ class FirebaseHelper {
                 oncallBack.onFailed()
             }
     }
+
+    fun saveLotteryVn1ToFirestore(chnotModel: LotteryVN1Model, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        // Get a reference to the "Chnots" collection
+        val chnotsCollection = db.collection("LotteryVN1").document(chnotModel.id.toString())
+
+        // Add a new document to the "Chnots" collection
+        chnotsCollection
+            .set(chnotModel)
+            .addOnSuccessListener { documentReference ->
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occurred during the upload
+                Log.e("Firestore", "Error adding document", e)
+                // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
+
 
     fun updateLotteryToFirestore(chnotModel: ChnotModel, oncallBack : OnUploadCallBack) {
         val db = FirebaseFirestore.getInstance()
