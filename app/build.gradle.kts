@@ -35,6 +35,10 @@ android {
         jvmTarget = "1.8"
     }
 
+    viewBinding { enable = true }
+
+    dataBinding { enable = true }
+
 }
 
 dependencies {
@@ -50,4 +54,6 @@ dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-analytics-ktx")
+
+    implementation ("androidx.databinding:databinding-runtime:8.1.1")
 }

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PtahChnot"
         tools:targetApi="31">
         <activity
+            android:name=".activities.fragment.vnOld.LotteryVN1Activity"
+            android:exported="false" />
+        <activity
             android:name=".EditDataActivity"
             android:exported="false" />
         <activity
