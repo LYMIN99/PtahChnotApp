@@ -2,7 +2,9 @@ package com.lymin.ptahchnotmanager.firebaseHelper
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.lymin.ptahchnotmanager.model.ChnotModel
+import com.lymin.ptahchnotmanager.model.LotteryTN1Model
 import com.lymin.ptahchnotmanager.model.LotteryVN1Model
+import com.lymin.ptahchnotmanager.model.LotteryVN2Model
 import com.lymin.ptahchnotmanager.model.PostModel
 import com.lymin.ptahchnotmanager.model.TimeModel
 import java.time.LocalDate
@@ -67,6 +69,25 @@ class FirebaseHelper {
 
             chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
                 val dataChnotModel = querySnapshot.toObject(LotteryVN1Model::class.java)
+                if (dataChnotModel != null) {
+                    oncallBack.onSuccess(dataChnotModel)
+                } else {
+                    oncallBack.onFailed()
+                }
+            }
+                .addOnFailureListener { exception ->
+                    // Handle errors while retrieving "Chnots" collection
+                    Log.e("TAG", "getData: getDataVN1", exception)
+                    oncallBack.onFailed()
+                }
+        }
+
+        fun getDataVN2(dateTime: String,oncallBack : OnGetVN2CallBack) {
+            val db = FirebaseFirestore.getInstance()
+            val chnotsCollectionRef = db.collection("LotteryVN2").document(dateTime)
+
+            chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+                val dataChnotModel = querySnapshot.toObject(LotteryVN2Model::class.java)
                 if (dataChnotModel != null) {
                     oncallBack.onSuccess(dataChnotModel)
                 } else {
@@ -161,6 +182,97 @@ class FirebaseHelper {
             }
     }
 
+    fun saveLotteryVn2ToFirestore(chnotModel: LotteryVN2Model, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        // Get a reference to the "Chnots" collection
+        val chnotsCollection = db.collection("LotteryVN2").document(chnotModel.date.toString())
+
+        // Add a new document to the "Chnots" collection
+        chnotsCollection
+            .set(chnotModel)
+            .addOnSuccessListener { documentReference ->
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occurred during the upload
+                Log.e("Firestore", "Error adding document", e)
+                // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
+
+    fun saveLotteryTn1ToFirestore(chnotModel: LotteryTN1Model, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        // Get a reference to the "Chnots" collection
+        val chnotsCollection = db.collection("LotteryTN1").document(chnotModel.date.toString())
+
+        // Add a new document to the "Chnots" collection
+        chnotsCollection
+            .set(chnotModel)
+            .addOnSuccessListener { documentReference ->
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occurred during the upload
+                Log.e("Firestore", "Error adding document", e)
+                // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
+    fun saveLotteryTn2ToFirestore(chnotModel: LotteryTN1Model, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        // Get a reference to the "Chnots" collection
+        val chnotsCollection = db.collection("LotteryTN2").document(chnotModel.date.toString())
+
+        // Add a new document to the "Chnots" collection
+        chnotsCollection
+            .set(chnotModel)
+            .addOnSuccessListener { documentReference ->
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occurred during the upload
+                Log.e("Firestore", "Error adding document", e)
+                // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
+    fun saveLotteryTn3ToFirestore(chnotModel: LotteryTN1Model, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        // Get a reference to the "Chnots" collection
+        val chnotsCollection = db.collection("LotteryTN3").document(chnotModel.date.toString())
+
+        // Add a new document to the "Chnots" collection
+        chnotsCollection
+            .set(chnotModel)
+            .addOnSuccessListener { documentReference ->
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occurred during the upload
+                Log.e("Firestore", "Error adding document", e)
+                // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
+    fun saveLotteryTn4ToFirestore(chnotModel: LotteryTN1Model, oncallBack : OnUploadCallBack) {
+        val db = FirebaseFirestore.getInstance()
+        // Get a reference to the "Chnots" collection
+        val chnotsCollection = db.collection("LotteryTN4").document(chnotModel.date.toString())
+
+        // Add a new document to the "Chnots" collection
+        chnotsCollection
+            .set(chnotModel)
+            .addOnSuccessListener { documentReference ->
+                oncallBack.onSuccess()
+            }
+            .addOnFailureListener { e ->
+                // Handle any errors that occurred during the upload
+                Log.e("Firestore", "Error adding document", e)
+                // You might want to display an error message to the user
+                oncallBack.onFailed()
+            }
+    }
 
     fun updateLotteryToFirestore(chnotModel: ChnotModel, oncallBack : OnUploadCallBack) {
         val db = FirebaseFirestore.getInstance()
@@ -255,6 +367,10 @@ class FirebaseHelper {
 
     interface OnGetVN1CallBack {
         fun onSuccess(data : LotteryVN1Model)
+        fun onFailed()
+    }
+    interface OnGetVN2CallBack {
+        fun onSuccess(data : LotteryVN2Model)
         fun onFailed()
     }
     interface OnGetTimesCallBack {

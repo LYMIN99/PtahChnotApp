@@ -10,7 +10,12 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.lymin.ptahchnotmanager.R
+import com.lymin.ptahchnotmanager.activities.fragment.tinhnam.LotteryTN1Activity
+import com.lymin.ptahchnotmanager.activities.fragment.tinhnam.LotteryTN2Activity
+import com.lymin.ptahchnotmanager.activities.fragment.tinhnam.LotteryTN3Activity
+import com.lymin.ptahchnotmanager.activities.fragment.tinhnam.LotteryTN4Activity
 import com.lymin.ptahchnotmanager.activities.fragment.vnOld.LotteryVN1Activity
+import com.lymin.ptahchnotmanager.activities.fragment.vnOld.LotteryVN2Activity
 
 class SelectLotteryBottomSheet(
     private val context: Context,
@@ -30,23 +35,23 @@ class SelectLotteryBottomSheet(
         }
         view.findViewById<LinearLayout>(R.id.btn2).setOnClickListener {
             mBottomSheetDialog!!.dismiss()
-            context.startActivity(Intent(context,LotteryVN1Activity::class.java))
+            context.startActivity(Intent(context, LotteryVN2Activity::class.java))
         }
         view.findViewById<LinearLayout>(R.id.btn_3).setOnClickListener {
             mBottomSheetDialog!!.dismiss()
-            context.startActivity(Intent(context,LotteryVN1Activity::class.java))
+            context.startActivity(Intent(context, LotteryTN1Activity::class.java))
         }
         view.findViewById<LinearLayout>(R.id.btn_4).setOnClickListener {
             mBottomSheetDialog!!.dismiss()
-            context.startActivity(Intent(context,LotteryVN1Activity::class.java))
+            context.startActivity(Intent(context, LotteryTN2Activity::class.java))
         }
         view.findViewById<LinearLayout>(R.id.btn_5).setOnClickListener {
             mBottomSheetDialog!!.dismiss()
-            context.startActivity(Intent(context,LotteryVN1Activity::class.java))
+            context.startActivity(Intent(context, LotteryTN3Activity::class.java))
         }
         view.findViewById<LinearLayout>(R.id.btn_6).setOnClickListener {
             mBottomSheetDialog!!.dismiss()
-            context.startActivity(Intent(context,LotteryVN1Activity::class.java))
+            context.startActivity(Intent(context, LotteryTN4Activity::class.java))
         }
 
 

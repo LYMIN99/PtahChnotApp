@@ -18,6 +18,21 @@
             android:name=".activities.fragment.vnOld.LotteryVN1Activity"
             android:exported="false" />
         <activity
+            android:name=".activities.fragment.vnOld.LotteryVN2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.fragment.tinhnam.LotteryTN1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.fragment.tinhnam.LotteryTN2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.fragment.tinhnam.LotteryTN3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.fragment.tinhnam.LotteryTN4Activity"
+            android:exported="false" />
+        <activity
             android:name=".EditDataActivity"
             android:exported="false" />
         <activity

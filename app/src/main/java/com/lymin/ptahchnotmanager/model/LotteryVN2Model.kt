@@ -36,7 +36,7 @@ class LotteryVN2Model {
 
     var lc1 : String? = null
     var lc2 : String? = null
-    var lc4 : String? = null
+    var lc3 : String? = null
 
     var ld1 : String? = null
     var ld2 : String? = null
@@ -53,22 +53,6 @@ class LotteryVN2Model {
     var lg1 : String? = null
     var lg2 : String? = null
     var lg3 : String? = null
-
-    var lh1 : String? = null
-    var lh2 : String? = null
-    var lh3 : String? = null
-
-    var li1 : String? = null
-    var li2 : String? = null
-    var li3 : String? = null
-
-    var lj1 : String? = null
-    var lj2 : String? = null
-    var lj3 : String? = null
-
-    var lk1 : String? = null
-    var lk2 : String? = null
-    var lk3 : String? = null
 
     constructor()
     constructor(
@@ -110,18 +94,6 @@ class LotteryVN2Model {
         lg1: String?,
         lg2: String?,
         lg3: String?,
-        lh1: String?,
-        lh2: String?,
-        lh3: String?,
-        li1: String?,
-        li2: String?,
-        li3: String?,
-        lj1: String?,
-        lj2: String?,
-        lj3: String?,
-        lk1: String?,
-        lk2: String?,
-        lk3: String?
     ) {
         this.id = id
         this.date = date
@@ -148,7 +120,7 @@ class LotteryVN2Model {
         this.lb3 = lb3
         this.lc1 = lc1
         this.lc2 = lc2
-        this.lc4 = lc4
+        this.lc3 = lc4
         this.ld1 = ld1
         this.ld2 = ld2
         this.ld3 = ld3
@@ -161,18 +133,6 @@ class LotteryVN2Model {
         this.lg1 = lg1
         this.lg2 = lg2
         this.lg3 = lg3
-        this.lh1 = lh1
-        this.lh2 = lh2
-        this.lh3 = lh3
-        this.li1 = li1
-        this.li2 = li2
-        this.li3 = li3
-        this.lj1 = lj1
-        this.lj2 = lj2
-        this.lj3 = lj3
-        this.lk1 = lk1
-        this.lk2 = lk2
-        this.lk3 = lk3
     }
 
 
