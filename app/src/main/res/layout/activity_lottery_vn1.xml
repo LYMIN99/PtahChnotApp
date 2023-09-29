@@ -173,6 +173,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -183,6 +185,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
@@ -194,6 +198,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -221,6 +227,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -231,6 +239,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
@@ -242,6 +252,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -269,6 +281,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -279,6 +293,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
@@ -290,6 +306,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -318,6 +336,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -328,6 +348,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
@@ -339,6 +361,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -366,6 +390,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -376,6 +402,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
@@ -387,6 +415,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -414,6 +444,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -424,6 +456,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
@@ -435,6 +469,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -462,6 +498,8 @@
                             android:textStyle="bold"
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -472,6 +510,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
@@ -483,6 +523,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -510,6 +552,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -521,6 +565,8 @@
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
                             android:layout_marginStart="10dp"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
 
@@ -531,6 +577,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -558,6 +606,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -569,6 +619,8 @@
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
                             android:layout_marginStart="10dp"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
 
@@ -579,6 +631,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -606,6 +660,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -617,6 +673,8 @@
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
                             android:layout_marginStart="10dp"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
                         <EditText
@@ -654,6 +712,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -665,6 +725,8 @@
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
                             android:layout_marginStart="10dp"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="000"/>
                         <EditText
@@ -702,6 +764,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="2"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="00"/>
 
@@ -712,9 +776,11 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="3"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                            android:hint="0000"/>
+                            android:hint="000"/>
 
                         <EditText
                             android:visibility="invisible"
@@ -751,6 +817,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
 
@@ -762,6 +830,8 @@
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
                             android:layout_marginStart="10dp"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
 
@@ -772,6 +842,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -800,6 +872,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
 
@@ -811,6 +885,8 @@
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
                             android:layout_marginStart="10dp"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
 
@@ -821,6 +897,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -849,6 +927,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
 
@@ -859,6 +939,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -870,6 +952,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -898,6 +982,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
 
@@ -908,6 +994,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="10dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>
@@ -919,6 +1007,8 @@
                             android:layout_height="wrap_content"
                             android:textColor="#8C0A00"
                             android:textStyle="bold"
+                            android:inputType="number"
+                            android:maxLength="4"
                             android:layout_marginStart="30dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:hint="0000"/>

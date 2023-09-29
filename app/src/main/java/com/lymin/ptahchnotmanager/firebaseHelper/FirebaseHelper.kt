@@ -60,7 +60,27 @@ class FirebaseHelper {
                     oncallBack.onFailed()
                 }
         }
+
+        fun getDataVN1(dateTime: String,oncallBack : OnGetVN1CallBack) {
+            val db = FirebaseFirestore.getInstance()
+            val chnotsCollectionRef = db.collection("LotteryVN1").document(dateTime)
+
+            chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+                val dataChnotModel = querySnapshot.toObject(LotteryVN1Model::class.java)
+                if (dataChnotModel != null) {
+                    oncallBack.onSuccess(dataChnotModel)
+                } else {
+                    oncallBack.onFailed()
+                }
+            }
+                .addOnFailureListener { exception ->
+                    // Handle errors while retrieving "Chnots" collection
+                    Log.e("TAG", "getData: getDataVN1", exception)
+                    oncallBack.onFailed()
+                }
+        }
     }
+
 
 
     fun getTimes(oncallBack : OnGetTimesCallBack) {
@@ -125,7 +145,7 @@ class FirebaseHelper {
     fun saveLotteryVn1ToFirestore(chnotModel: LotteryVN1Model, oncallBack : OnUploadCallBack) {
         val db = FirebaseFirestore.getInstance()
         // Get a reference to the "Chnots" collection
-        val chnotsCollection = db.collection("LotteryVN1").document(chnotModel.id.toString())
+        val chnotsCollection = db.collection("LotteryVN1").document(chnotModel.date.toString())
 
         // Add a new document to the "Chnots" collection
         chnotsCollection
@@ -233,6 +253,10 @@ class FirebaseHelper {
             }
     }
 
+    interface OnGetVN1CallBack {
+        fun onSuccess(data : LotteryVN1Model)
+        fun onFailed()
+    }
     interface OnGetTimesCallBack {
         fun onSuccess(list : MutableList<TimeModel>)
         fun onFailed()

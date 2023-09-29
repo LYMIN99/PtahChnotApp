@@ -1,37 +1,20 @@
 package com.lymin.ptahchnotmanager.activities.fragment.vnOld
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.lymin.ptahchnotmanager.AddDataActivity
 import com.lymin.ptahchnotmanager.R
+import com.lymin.ptahchnotmanager.activities.utils.Utils
 import com.lymin.ptahchnotmanager.databinding.FragmentLotteryVnOldBinding
+import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
+import com.lymin.ptahchnotmanager.model.LotteryVN1Model
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-/**
- * A simple [Fragment] subclass.
- * Use the [LotteryVnOldFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class LotteryVnOldFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -43,36 +26,80 @@ class LotteryVnOldFragment : Fragment() {
             false
         )
 
-        // Create an instance of your ViewModel and bind it to the layout
-//        val viewModel = YourViewModel() // Replace with your ViewModel
-//        binding.viewModel = viewModel
-//
-//        // Optional: Specify the lifecycle owner to observe LiveData
-//        binding.lifecycleOwner = this
-
         binding.btnEdit1.setOnClickListener {
             startActivity(Intent(context, LotteryVN1Activity::class.java))
         }
+
+        getData410(binding)
+
         return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LotteryVnOldFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LotteryVnOldFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun getData410(binding: FragmentLotteryVnOldBinding) {
+        FirebaseHelper.getDataVN1(Utils.getYesterday(),object : FirebaseHelper.OnGetVN1CallBack{
+            @SuppressLint("SetTextI18n")
+            override fun onSuccess(data: LotteryVN1Model) {
+                binding.tvDateTime.text = "ថ្ងៃ ${data.date} ម៉ោង 04:10"
+
+                binding.tvA2.text = data.a2
+                binding.tvA3.text = data.a3
+                binding.tvA4.text = data.a4
+
+                binding.b2.text = data.b2
+                binding.b3.text = data.b3
+                binding.b4.text = data.b4
+
+                binding.c2.text = data.c2
+                binding.c3.text = data.c3
+
+                binding.d2.text = data.d2
+                binding.d3.text = data.d3
+
+                binding.f2.text = data.f2
+                binding.f3.text = data.f3
+                binding.f4.text = data.f3
+
+                binding.n2.text = data.n2
+                binding.n3.text = data.n3
+                binding.n4.text = data.n4
+
+                binding.i2.text = data.i2
+                binding.i3.text = data.i3
+                binding.i4.text = data.i4
+
+                binding.k2.text = data.k2
+                binding.k3.text = data.k3
+                binding.k4.text = data.k4
+
+                binding.o2.text = data.o2
+                binding.o3.text = data.o3
+
+                binding.v12.text = data.va2
+                binding.v13.text = data.va3
+
+                binding.v22.text = data.vb2
+                binding.v23.text = data.vb3
+
+                binding.loa1.text = data.la1
+                binding.loa2.text = data.la2
+                binding.loa3.text = data.la3
+
+                binding.lob1.text = data.lb1
+                binding.lob2.text = data.lb2
+                binding.lob3.text = data.lb3
+
+                binding.loc1.text = data.lc1
+                binding.loc2.text = data.lc2
+                binding.loc3.text = data.lc3
+
+                binding.lod1.text = data.ld1
+                binding.lod2.text = data.ld2
+                binding.lod3.text = data.ld3
             }
+
+            override fun onFailed() {
+
+            }
+        })
     }
 }
