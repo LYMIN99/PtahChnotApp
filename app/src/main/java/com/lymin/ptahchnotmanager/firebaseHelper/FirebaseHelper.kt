@@ -3,6 +3,7 @@ import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.lymin.ptahchnotmanager.model.ChnotModel
 import com.lymin.ptahchnotmanager.model.LotteryTN1Model
+import com.lymin.ptahchnotmanager.model.LotteryTN4Model
 import com.lymin.ptahchnotmanager.model.LotteryVN1Model
 import com.lymin.ptahchnotmanager.model.LotteryVN2Model
 import com.lymin.ptahchnotmanager.model.PostModel
@@ -100,6 +101,80 @@ class FirebaseHelper {
                     oncallBack.onFailed()
                 }
         }
+
+        fun getDataTN1(dateTime: String,oncallBack : OnGetTN1CallBack) {
+            val db = FirebaseFirestore.getInstance()
+            val chnotsCollectionRef = db.collection("LotteryTN1").document(dateTime)
+
+            chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+                val dataChnotModel = querySnapshot.toObject(LotteryTN1Model::class.java)
+                if (dataChnotModel != null) {
+                    oncallBack.onSuccess(dataChnotModel)
+                } else {
+                    oncallBack.onFailed()
+                }
+            }
+                .addOnFailureListener { exception ->
+                    // Handle errors while retrieving "Chnots" collection
+                    Log.e("TAG", "getData: LotteryTN1", exception)
+                    oncallBack.onFailed()
+                }
+        }
+        fun getDataTN2(dateTime: String,oncallBack : OnGetVN2CallBack) {
+            val db = FirebaseFirestore.getInstance()
+            val chnotsCollectionRef = db.collection("LotteryVN2").document(dateTime)
+
+            chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+                val dataChnotModel = querySnapshot.toObject(LotteryVN2Model::class.java)
+                if (dataChnotModel != null) {
+                    oncallBack.onSuccess(dataChnotModel)
+                } else {
+                    oncallBack.onFailed()
+                }
+            }
+                .addOnFailureListener { exception ->
+                    // Handle errors while retrieving "Chnots" collection
+                    Log.e("TAG", "getData: getDataVN1", exception)
+                    oncallBack.onFailed()
+                }
+        }
+        fun getDataTN3(dateTime: String,oncallBack : OnGetVN2CallBack) {
+            val db = FirebaseFirestore.getInstance()
+            val chnotsCollectionRef = db.collection("LotteryVN2").document(dateTime)
+
+            chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+                val dataChnotModel = querySnapshot.toObject(LotteryVN2Model::class.java)
+                if (dataChnotModel != null) {
+                    oncallBack.onSuccess(dataChnotModel)
+                } else {
+                    oncallBack.onFailed()
+                }
+            }
+                .addOnFailureListener { exception ->
+                    // Handle errors while retrieving "Chnots" collection
+                    Log.e("TAG", "getData: getDataVN1", exception)
+                    oncallBack.onFailed()
+                }
+        }
+        fun getDataTN4(dateTime: String,oncallBack : OnGetVN2CallBack) {
+            val db = FirebaseFirestore.getInstance()
+            val chnotsCollectionRef = db.collection("LotteryVN2").document(dateTime)
+
+            chnotsCollectionRef.get().addOnSuccessListener { querySnapshot ->
+                val dataChnotModel = querySnapshot.toObject(LotteryVN2Model::class.java)
+                if (dataChnotModel != null) {
+                    oncallBack.onSuccess(dataChnotModel)
+                } else {
+                    oncallBack.onFailed()
+                }
+            }
+                .addOnFailureListener { exception ->
+                    // Handle errors while retrieving "Chnots" collection
+                    Log.e("TAG", "getData: getDataVN1", exception)
+                    oncallBack.onFailed()
+                }
+        }
+
     }
 
 
@@ -255,7 +330,7 @@ class FirebaseHelper {
                 oncallBack.onFailed()
             }
     }
-    fun saveLotteryTn4ToFirestore(chnotModel: LotteryTN1Model, oncallBack : OnUploadCallBack) {
+    fun saveLotteryTn4ToFirestore(chnotModel: LotteryTN4Model, oncallBack : OnUploadCallBack) {
         val db = FirebaseFirestore.getInstance()
         // Get a reference to the "Chnots" collection
         val chnotsCollection = db.collection("LotteryTN4").document(chnotModel.date.toString())
@@ -371,6 +446,10 @@ class FirebaseHelper {
     }
     interface OnGetVN2CallBack {
         fun onSuccess(data : LotteryVN2Model)
+        fun onFailed()
+    }
+    interface OnGetTN1CallBack {
+        fun onSuccess(data : LotteryTN1Model)
         fun onFailed()
     }
     interface OnGetTimesCallBack {

@@ -30,6 +30,10 @@ class LotteryVnOldFragment : Fragment() {
         binding.btnEdit1.setOnClickListener {
             startActivity(Intent(context, LotteryVN1Activity::class.java))
         }
+        binding.btnEdit2.setOnClickListener {
+            startActivity(Intent(context, LotteryVN2Activity::class.java))
+        }
+
 
         getData410(binding)
         getData615(binding)

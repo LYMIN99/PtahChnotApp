@@ -30,7 +30,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/yellow_700"
                     android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                    android:text="ថ្ងៃ 24/09/2023 ម៉ោង 04:10"/>
+                    android:text="ថ្ងៃ -- ម៉ោង 04:10"/>
 
                 <ImageButton
                     android:id="@+id/btn_edit_1"
@@ -740,6 +740,7 @@
             <LinearLayout
                 android:id="@+id/btn_view"
                 android:clickable="true"
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -775,7 +776,7 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/yellow_700"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="ថ្ងៃ 24/09/2023 ម៉ោង 06:15"/>
+                        android:text="ថ្ងៃ -- ម៉ោង 06:15"/>
 
                     <ImageButton
                         android:id="@+id/btn_edit_2"
@@ -784,6 +785,7 @@
                         android:src="@drawable/baseline_edit_24"
                         android:foreground="?selectableItemBackground"
                         android:padding="10dp"
+                        android:tag="edit"
                         android:background="@android:color/transparent"
                         app:tint="@android:color/white" />
 
@@ -1340,6 +1342,7 @@
                 <LinearLayout
                     android:id="@+id/btn_view_2"
                     android:clickable="true"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"

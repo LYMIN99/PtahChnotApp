@@ -9,11 +9,13 @@ import androidx.databinding.DataBindingUtil
 import com.lymin.ptahchnotmanager.R
 import com.lymin.ptahchnotmanager.activities.utils.Utils
 import com.lymin.ptahchnotmanager.databinding.ActivityLotteryTn1Binding
+import com.lymin.ptahchnotmanager.databinding.ActivityLotteryTn4Binding
 import com.lymin.ptahchnotmanager.databinding.ActivityLotteryVn1Binding
 import com.lymin.ptahchnotmanager.databinding.ActivityMainBinding
 import com.lymin.ptahchnotmanager.dialog.DialogPickDate
 import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
 import com.lymin.ptahchnotmanager.model.LotteryTN1Model
+import com.lymin.ptahchnotmanager.model.LotteryTN4Model
 import com.lymin.ptahchnotmanager.model.LotteryVN1Model
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -21,10 +23,10 @@ import java.util.UUID
 
 class LotteryTN4Activity : AppCompatActivity() {
     lateinit var tvDate : TextView
-    lateinit var binding: ActivityLotteryTn1Binding
+    lateinit var binding: ActivityLotteryTn4Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_lottery_tn1)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_lottery_tn4)
 
         initToolBar()
         if (binding!=null) {
@@ -73,12 +75,13 @@ class LotteryTN4Activity : AppCompatActivity() {
         binding.btnSave.setOnClickListener {
             saveData()
         }
+
     }
 
     private fun saveData() {
         val id = UUID.randomUUID().toString()
 
-        val data = LotteryTN1Model(
+        val data = LotteryTN4Model(
             id,
             binding.tvDate.text.toString(),
             binding.tvTime.text.toString(),
@@ -92,23 +95,6 @@ class LotteryTN4Activity : AppCompatActivity() {
             binding.c3.text.toString(),
             binding.d2.text.toString(),
             binding.d3.text.toString(),
-            binding.f2.text.toString(),
-            binding.f3.text.toString(),
-            binding.n2.text.toString(),
-            binding.n3.text.toString(),
-            binding.n4.text.toString(),
-            binding.i2.text.toString(),
-            binding.i3.text.toString(),
-            binding.k2.text.toString(),
-            binding.k3.text.toString(),
-            binding.k4.text.toString(),
-            binding.o2.text.toString(),
-            binding.o3.text.toString(),
-            binding.z2.text.toString(),
-            binding.z3.text.toString(),
-            binding.p2.text.toString(),
-            binding.p3.text.toString(),
-            binding.p4.text.toString(),
             binding.loa1.text.toString(),
             binding.loa2.text.toString(),
             binding.loa3.text.toString(),
