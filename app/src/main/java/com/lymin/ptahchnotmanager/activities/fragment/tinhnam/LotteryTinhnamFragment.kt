@@ -15,6 +15,7 @@ import com.lymin.ptahchnotmanager.databinding.FragmentLotteryTinhnameBinding
 import com.lymin.ptahchnotmanager.databinding.FragmentLotteryVnOldBinding
 import com.lymin.ptahchnotmanager.firebaseHelper.FirebaseHelper
 import com.lymin.ptahchnotmanager.model.LotteryTN1Model
+import com.lymin.ptahchnotmanager.model.LotteryTN4Model
 import com.lymin.ptahchnotmanager.model.LotteryVN1Model
 
 class LotteryTinhnamFragment : Fragment() {
@@ -119,7 +120,7 @@ class LotteryTinhnamFragment : Fragment() {
         })
     }
     private fun getData1315(binding: FragmentLotteryTinhnameBinding) {
-        FirebaseHelper.getDataTN1(Utils.getYesterday(),object : FirebaseHelper.OnGetTN1CallBack{
+        FirebaseHelper.getDataTN2(Utils.getYesterday(),object : FirebaseHelper.OnGetTN1CallBack{
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryTN1Model) {
                 binding.tvDateTime1.text = "ថ្ងៃ ${data.date} ម៉ោង 13:15"
@@ -188,7 +189,7 @@ class LotteryTinhnamFragment : Fragment() {
         })
     }
     private fun getData415(binding: FragmentLotteryTinhnameBinding) {
-        FirebaseHelper.getDataTN1(Utils.getYesterday(),object : FirebaseHelper.OnGetTN1CallBack{
+        FirebaseHelper.getDataTN3(Utils.getYesterday(),object : FirebaseHelper.OnGetTN1CallBack{
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryTN1Model) {
                 binding.tvDateTime1.text = "ថ្ងៃ ${data.date} ម៉ោង 4:15"
@@ -257,9 +258,9 @@ class LotteryTinhnamFragment : Fragment() {
         })
     }
     private fun getData615(binding: FragmentLotteryTinhnameBinding) {
-        FirebaseHelper.getDataTN1(Utils.getYesterday(),object : FirebaseHelper.OnGetTN1CallBack{
+        FirebaseHelper.getDataTN4(Utils.getYesterday(),object : FirebaseHelper.OnGetTN4CallBack{
             @SuppressLint("SetTextI18n")
-            override fun onSuccess(data: LotteryTN1Model) {
+            override fun onSuccess(data: LotteryTN4Model) {
                 binding.tvDateTime1.text = "ថ្ងៃ ${data.date} ម៉ោង 10:15"
 
                 binding.tvAaaa2.text = data.a2
