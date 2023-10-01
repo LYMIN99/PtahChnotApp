@@ -1,6 +1,7 @@
 package com.lymin.ptahchnotapp.activities.fragment.vnOld
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.lymin.ptahchnotapp.R
+import com.lymin.ptahchnotapp.activities.fragment.tinhnam.LotteryTN4Activity
 import com.lymin.ptahchnotapp.activities.utils.Utils
 import com.lymin.ptahchnotapp.databinding.FragmentLotteryVnOldBinding
 import com.lymin.ptahchnotapp.firebaseHelper.FirebaseHelper
@@ -61,7 +63,11 @@ class LotteryVnOldFragment : Fragment() {
         FirebaseHelper.getDataVN1(Utils.getYesterday(),object : FirebaseHelper.OnGetVN1CallBack{
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryVN1Model) {
-
+                binding.btnView.setOnClickListener {
+                    val intent = Intent(context, LotteryVN1Activity::class.java)
+                    intent.putExtra("Lottery", data)
+                    context!!.startActivity(intent)
+                }
                 binding.tvA2.text = data.a2
                 binding.tvA3.text = data.a3
                 binding.tvA4.text = data.a4
@@ -119,6 +125,10 @@ class LotteryVnOldFragment : Fragment() {
             }
 
             override fun onFailed() {
+                binding.btnView.setOnClickListener {
+                    val intent = Intent(context, LotteryVN1Activity::class.java)
+                    context!!.startActivity(intent)
+                }
                 binding.tvA2.text =""
                 binding.tvA3.text =""
                 binding.tvA4.text =""
@@ -169,7 +179,11 @@ class LotteryVnOldFragment : Fragment() {
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryVN2Model) {
               //  binding.tvDateTime2.text = "ថ្ងៃ ${data.date} ម៉ោង 06:10"
-
+                binding.btnView2.setOnClickListener {
+                    val intent = Intent(context, LotteryVN2Activity::class.java)
+                    intent.putExtra("Lottery", data)
+                    context!!.startActivity(intent)
+                }
                 binding.aa2.text = data.aa2
                 binding.aa3.text = data.aa3
 
@@ -221,7 +235,10 @@ class LotteryVnOldFragment : Fragment() {
             }
 
             override fun onFailed() {
-
+                binding.btnView2.setOnClickListener {
+                    val intent = Intent(context, LotteryVN2Activity::class.java)
+                    context!!.startActivity(intent)
+                }
                 binding.aa2.text =""
                 binding.aa3.text =""
                 binding.ab2.text =""

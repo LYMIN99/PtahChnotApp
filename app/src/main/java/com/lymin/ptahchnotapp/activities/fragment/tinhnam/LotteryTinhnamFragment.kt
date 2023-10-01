@@ -59,13 +59,12 @@ class LotteryTinhnamFragment : Fragment() {
         FirebaseHelper.getDataTN1(Utils.getDay(day),object : FirebaseHelper.OnGetTN1CallBack{
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryTN1Model) {
+                    //  binding.tvDateTime1.text = "ថ្ងៃ ${data.date} ម៉ោង 10:15"
                 binding.btnView.setOnClickListener {
                     val intent = Intent(context, LotteryTN1Activity::class.java)
                     intent.putExtra("Lottery", data)
                     context!!.startActivity(intent)
                 }
-                    //  binding.tvDateTime1.text = "ថ្ងៃ ${data.date} ម៉ោង 10:15"
-
                 binding.tvA2.text = data.a2
                 binding.tvA3.text = data.a3
                 binding.tvA4.text = data.a4
@@ -125,6 +124,10 @@ class LotteryTinhnamFragment : Fragment() {
             }
 
             override fun onFailed() {
+                binding.btnView.setOnClickListener {
+                    val intent = Intent(context, LotteryTN1Activity::class.java)
+                    context!!.startActivity(intent)
+                }
                 binding.tvA2.text = ""
                 binding.tvA3.text = ""
                 binding.tvA4.text = ""
@@ -168,6 +171,7 @@ class LotteryTinhnamFragment : Fragment() {
                 binding.loa2.text = ""
             }
         })
+
     }
     private fun getData1315(binding: FragmentLotteryTinhnameBinding, day: Long) {
         binding.tvDateTime2.text =  "ថ្ងៃ ${Utils.getDay(day)} ម៉ោង 13:15"
@@ -241,7 +245,10 @@ class LotteryTinhnamFragment : Fragment() {
             }
 
             override fun onFailed() {
-
+                binding.btnView2.setOnClickListener {
+                    val intent = Intent(context, LotteryTN1Activity::class.java)
+                    context!!.startActivity(intent)
+                }
                 binding.tvAa2.text = ""
                 binding.tvAa3.text = ""
                 binding.tvAa4.text = ""
@@ -356,6 +363,10 @@ class LotteryTinhnamFragment : Fragment() {
             }
 
             override fun onFailed() {
+                binding.btnView3.setOnClickListener {
+                    val intent = Intent(context, LotteryTN1Activity::class.java)
+                    context!!.startActivity(intent)
+                }
                 binding.tvAaa2.text = ""
                 binding.tvAaa3.text = ""
                 binding.tvAaa4.text = ""
@@ -407,7 +418,7 @@ class LotteryTinhnamFragment : Fragment() {
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryTN4Model) {
                 binding.btnView4.setOnClickListener {
-                    val intent = Intent(context, LotteryTN1Activity::class.java)
+                    val intent = Intent(context, LotteryTN4Activity::class.java)
                     intent.putExtra("Lottery", data)
                     context!!.startActivity(intent)
                 }
@@ -447,6 +458,10 @@ class LotteryTinhnamFragment : Fragment() {
             }
 
             override fun onFailed() {
+                binding.btnView4.setOnClickListener {
+                    val intent = Intent(context, LotteryTN4Activity::class.java)
+                    context!!.startActivity(intent)
+                }
                 binding.tvAaaa2.text = ""
                 binding.tvAaaa3.text = ""
                 binding.tvAaaa4.text = ""
