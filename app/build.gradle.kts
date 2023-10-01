@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.lymin.ptahchnotmanager"
+    namespace = "com.lymin.ptahchnotapp"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.lymin.ptahchnotmanager"
+        applicationId = "com.lymin.ptahchnotapp"
         minSdk = 26
         targetSdk = 33
         versionCode = 1

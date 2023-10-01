@@ -8,6 +8,7 @@
     tools:context=".activities.fragment.tinhnam.LotteryTinhnamFragment">
 
     <androidx.core.widget.NestedScrollView
+        android:layout_marginBottom="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -32,21 +33,12 @@
                         android:id="@+id/tv_date_time1"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_marginStart="15dp"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/yellow_700"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:text="ថ្ងៃ -- ម៉ោង 10:15"/>
-
-                    <ImageButton
-                        android:id="@+id/btn_edit_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baseline_edit_24"
-                        android:foreground="?selectableItemBackground"
-                        android:padding="10dp"
-                        android:background="@android:color/transparent"
-                        app:tint="@android:color/white" />
 
 
                 </LinearLayout>
@@ -551,6 +543,7 @@
                     android:orientation="horizontal"
                     android:padding="2dp"
                     android:gravity="center_vertical"
+                    android:visibility="gone"
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -764,7 +757,7 @@
                 <LinearLayout
                     android:id="@+id/btn_view"
                     android:clickable="true"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -800,21 +793,12 @@
                         android:id="@+id/tv_date_time2"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_marginStart="15dp"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/yellow_700"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:text="ថ្ងៃ -- ម៉ោង 13:15"/>
-
-                    <ImageButton
-                        android:id="@+id/btn_edit_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baseline_edit_24"
-                        android:foreground="?selectableItemBackground"
-                        android:padding="10dp"
-                        android:background="@android:color/transparent"
-                        app:tint="@android:color/white" />
 
 
                 </LinearLayout>
@@ -1319,6 +1303,7 @@
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:padding="2dp"
+                    android:visibility="gone"
                     android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
@@ -1533,7 +1518,7 @@
                 <LinearLayout
                     android:id="@+id/btn_view2"
                     android:clickable="true"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -1569,22 +1554,12 @@
                         android:id="@+id/tv_date_time3"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_marginStart="15dp"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/yellow_700"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:text="ថ្ងៃ -- ម៉ោង 4:15"/>
-
-                    <ImageButton
-                        android:id="@+id/btn_edit_3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baseline_edit_24"
-                        android:foreground="?selectableItemBackground"
-                        android:padding="10dp"
-                        android:background="@android:color/transparent"
-                        app:tint="@android:color/white" />
-
 
                 </LinearLayout>
 
@@ -2088,6 +2063,7 @@
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:padding="2dp"
+                    android:visibility="gone"
                     android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
@@ -2303,7 +2279,7 @@
                 <LinearLayout
                     android:id="@+id/btn_view3"
                     android:clickable="true"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -2339,22 +2315,12 @@
                         android:id="@+id/tv_date_time4"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_marginStart="15dp"
+                        android:gravity="center_horizontal"
+                        android:padding="10dp"
                         android:layout_height="wrap_content"
                         android:textColor="@color/yellow_700"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:text="ថ្ងៃ -- ម៉ោង 6:15"/>
-
-                    <ImageButton
-                        android:id="@+id/btn_edit_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baseline_edit_24"
-                        android:foreground="?selectableItemBackground"
-                        android:padding="10dp"
-                        android:background="@android:color/transparent"
-                        app:tint="@android:color/white" />
-
 
                 </LinearLayout>
 
@@ -2543,6 +2509,7 @@
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:padding="2dp"
+                    android:visibility="gone"
                     android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
@@ -2756,7 +2723,7 @@
 
                 <LinearLayout
                     android:id="@+id/btn_view4"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     android:clickable="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -2781,6 +2748,80 @@
 
 
     </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:background="@color/primary"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btn_day_back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:foreground="?selectableItemBackground"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:tint="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="មុនថ្ងៃនេះ"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_day_new"
+            android:foreground="?selectableItemBackground"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="ចេញថ្មីៗ"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_day_forward"
+            android:foreground="?selectableItemBackground"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="ក្រោយថ្ងៃនេះ"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_forward_24"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </FrameLayout>
 

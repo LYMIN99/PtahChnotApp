@@ -1,16 +1,7 @@
 <resources>
-    <string name="app_name">PtahChnot Manager</string>
-    <string name="post">បុស្តិ</string>
-    <string name="number">លេខឆ្នោត</string>
-    <string name="date">ថ្ងៃ</string>
-    <string name="time">ម៉ោង</string>
-    <string name="save">រួចរាល់</string>
-    <string name="add">បន្ថែម</string>
-    <string name="result_lottery">លទ្ធផលឆ្នោតទាំងអស់</string>
-    <string name="navigation_drawer_open">OPEN</string>
-    <string name="navigation_drawer_close">CLOSE</string>
+    <string name="app_name">PtahChnot</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="lotter_old_vn">ឆ្នោតវៀតណាមចាស់</string>
     <string name="lotter_tn">ឆ្នោតធិញណាម</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="viewdata">មើលលទ្ធផលឆ្នោត</string>
 </resources>

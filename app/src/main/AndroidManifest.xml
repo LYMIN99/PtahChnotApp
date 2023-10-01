@@ -24,31 +24,7 @@
             android:name=".activities.fragment.tinhnam.LotteryTN1Activity"
             android:exported="false" />
         <activity
-            android:name=".activities.fragment.tinhnam.LotteryTN2Activity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.fragment.tinhnam.LotteryTN3Activity"
-            android:exported="false" />
-        <activity
             android:name=".activities.fragment.tinhnam.LotteryTN4Activity"
-            android:exported="false" />
-        <activity
-            android:name=".EditDataActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.PostsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.LotteryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.LotteryDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activities.TimesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AddDataActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
