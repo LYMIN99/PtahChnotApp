@@ -79,6 +79,9 @@ class LotteryVN1Activity : AppCompatActivity() {
             binding.lod1.text = data.ld1
             binding.lod2.text = data.ld2
             binding.lod3.text = data.ld3
+
+        binding.loe1.text = data.le1
+        binding.loe2.text = data.le2
     }
 
 

@@ -370,7 +370,55 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/yellow_700"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginStart="30dp"
+                    android:textColor="#3F51B5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:text="L"/>
+
+                <TextView
+                    android:id="@+id/l2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8C0A00"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    />
+
+                <TextView
+                    android:id="@+id/l3"
+                    android:layout_width="@dimen/spacing_xxXlarge"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8C0A00"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    />
+
+                <TextView
+                    android:id="@+id/l4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#8C0A00"
+                    android:textStyle="bold"
+                    android:layout_marginStart="30dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/yellow_700"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
@@ -744,7 +792,7 @@
                     android:textColor="@color/blue_700"
                     android:textStyle="bold"
                     android:padding="5dp"
-                    android:text="ចុចទីនេះ! មើលឆ្នោតម៉ោង 4:10  >"/>
+                    android:text="ចុចទីនេះ! មើលឡូឆ្នោតម៉ោង 4:10  >"/>
 
             </LinearLayout>
 
@@ -1336,7 +1384,7 @@
                         android:textColor="@color/blue_700"
                         android:textStyle="bold"
                         android:padding="5dp"
-                        android:text="ចុចទីនេះ! មើលឆ្នោតម៉ោង 6:15  >"/>
+                        android:text="ចុចទីនេះ! មើលឡូឆ្នោតម៉ោង 6:15  >"/>
 
                 </LinearLayout>
 

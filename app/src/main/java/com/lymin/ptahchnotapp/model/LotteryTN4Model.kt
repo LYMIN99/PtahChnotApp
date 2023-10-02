@@ -2,7 +2,7 @@ package com.lymin.ptahchnotapp.model
 
 import java.io.Serializable
 
-class LotteryTN4Model : Serializable{
+class LotteryTN4Model  : Serializable {
     var id : String? = null
     var date: String? = null
     var time: String? = null
@@ -44,8 +44,14 @@ class LotteryTN4Model : Serializable{
 
     var loe1 : String? = null
     var loe2 : String? = null
+    var loe3 : String? = null
 
-    constructor()
+    var lof1 : String? = null
+    var lof2 : String? = null
+    var lof3 : String? = null
+
+    var log1 : String? = null
+
     constructor(
         id: String?,
         date: String?,
@@ -77,7 +83,12 @@ class LotteryTN4Model : Serializable{
         lod2: String?,
         lod3: String?,
         loe1: String?,
-        loe2: String?
+        loe2: String?,
+        loe3: String?,
+        lof1: String?,
+        lof2: String?,
+        lof3: String?,
+        log1: String?
     ) {
         this.id = id
         this.date = date
@@ -110,7 +121,13 @@ class LotteryTN4Model : Serializable{
         this.lod3 = lod3
         this.loe1 = loe1
         this.loe2 = loe2
+        this.loe3 = loe3
+        this.lof1 = lof1
+        this.lof2 = lof2
+        this.lof3 = lof3
+        this.log1 = log1
     }
 
+    constructor()
 
 }

@@ -771,7 +771,7 @@
                         android:textColor="@color/blue_700"
                         android:textStyle="bold"
                         android:padding="5dp"
-                        android:text="ចុចទីនេះ! មើលឆ្នោតម៉ោង 10:15  >"/>
+                        android:text="ចុចទីនេះ! មើលឡូឆ្នោតម៉ោង 10:15  >"/>
 
                 </LinearLayout>
 
@@ -1531,7 +1531,7 @@
                         android:textColor="@color/blue_700"
                         android:textStyle="bold"
                         android:padding="5dp"
-                        android:text="ចុចទីនេះ! មើលឆ្នោតម៉ោង 13:15  >"/>
+                        android:text="ចុចទីនេះ! មើលឡូឆ្នោតម៉ោង 13:15  >"/>
 
                 </LinearLayout>
 
@@ -2293,7 +2293,7 @@
                         android:textColor="@color/blue_700"
                         android:textStyle="bold"
                         android:padding="5dp"
-                        android:text="ចុចទីនេះ! មើលឆ្នោតម៉ោង 4:15  >"/>
+                        android:text="ចុចទីនេះ! មើលឡូឆ្នោតម៉ោង 4:15  >"/>
 
                 </LinearLayout>
 
@@ -2865,7 +2865,7 @@
                         android:textColor="@color/blue_700"
                         android:textStyle="bold"
                         android:padding="5dp"
-                        android:text="ចុចទីនេះ! មើលឆ្នោតម៉ោង 6:15  >"/>
+                        android:text="ចុចទីនេះ! មើលឡូឆ្នោតម៉ោង 6:15  >"/>
 
                 </LinearLayout>
 

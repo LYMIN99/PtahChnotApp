@@ -2,7 +2,7 @@ package com.lymin.ptahchnotapp.model
 
 import java.io.Serializable
 
-class LotteryVN1Model : Serializable{
+class LotteryVN1Model : Serializable {
     var id : String? = null
     var date: String? = null
     var time: String? = null
@@ -33,6 +33,10 @@ class LotteryVN1Model : Serializable{
     var i3 : String? = null
     var i4 : String? = null
 
+    var l2 : String? = null
+    var l3 : String? = null
+    var l4 : String? = null
+
     var k2 : String? = null
     var k3 : String? = null
     var k4 : String? = null
@@ -62,7 +66,11 @@ class LotteryVN1Model : Serializable{
     var ld2 : String? = null
     var ld3 : String? = null
 
+    var le1 : String? = null
+    var le2 : String? = null
 
+
+    constructor()
     constructor(
         id: String?,
         date: String?,
@@ -86,6 +94,9 @@ class LotteryVN1Model : Serializable{
         i2: String?,
         i3: String?,
         i4: String?,
+        l2: String?,
+        l3: String?,
+        l4: String?,
         k2: String?,
         k3: String?,
         k4: String?,
@@ -106,7 +117,9 @@ class LotteryVN1Model : Serializable{
         lc3: String?,
         ld1: String?,
         ld2: String?,
-        ld3: String?
+        ld3: String?,
+        le1: String?,
+        le2: String?
     ) {
         this.id = id
         this.date = date
@@ -130,6 +143,9 @@ class LotteryVN1Model : Serializable{
         this.i2 = i2
         this.i3 = i3
         this.i4 = i4
+        this.l2 = l2
+        this.l3 = l3
+        this.l4 = l4
         this.k2 = k2
         this.k3 = k3
         this.k4 = k4
@@ -151,7 +167,7 @@ class LotteryVN1Model : Serializable{
         this.ld1 = ld1
         this.ld2 = ld2
         this.ld3 = ld3
+        this.le1 = le1
+        this.le2 = le2
     }
-
-    constructor()
 }

@@ -60,7 +60,8 @@ class LotteryVnOldFragment : Fragment() {
     @SuppressLint("SetTextI18n")
     private fun getData410(binding: FragmentLotteryVnOldBinding, day: Long) {
         binding.tvDateTime.text = "ថ្ងៃ ${Utils.getDay(day)} ម៉ោង 04:10"
-        FirebaseHelper.getDataVN1(Utils.getYesterday(),object : FirebaseHelper.OnGetVN1CallBack{
+        clearData1()
+        FirebaseHelper.getDataVN1(Utils.getDay(day),object : FirebaseHelper.OnGetVN1CallBack{
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryVN1Model) {
                 binding.btnView.setOnClickListener {
@@ -84,7 +85,7 @@ class LotteryVnOldFragment : Fragment() {
 
                 binding.f2.text = data.f2
                 binding.f3.text = data.f3
-                binding.f4.text = data.f3
+                binding.f4.text = data.f4
 
                 binding.n2.text = data.n2
                 binding.n3.text = data.n3
@@ -93,6 +94,10 @@ class LotteryVnOldFragment : Fragment() {
                 binding.i2.text = data.i2
                 binding.i3.text = data.i3
                 binding.i4.text = data.i4
+
+                binding.l2.text = data.l2
+                binding.l3.text = data.l3
+                binding.l4.text = data.l4
 
                 binding.k2.text = data.k2
                 binding.k3.text = data.k3
@@ -129,53 +134,100 @@ class LotteryVnOldFragment : Fragment() {
                     val intent = Intent(context, LotteryVN1Activity::class.java)
                     context!!.startActivity(intent)
                 }
-                binding.tvA2.text =""
-                binding.tvA3.text =""
-                binding.tvA4.text =""
-                binding.b2.text =""
-                binding.b3.text =""
-                binding.b4.text =""
-                binding.c2.text =""
-                binding.c3.text =""
-                binding.d2.text =""
-                binding.d3.text =""
-                binding.f2.text =""
-                binding.f3.text =""
-                binding.f4.text =""
-                binding.n2.text =""
-                binding.n3.text =""
-                binding.n4.text =""
-                binding.i2.text =""
-                binding.i3.text =""
-                binding.i4.text =""
-                binding.k2.text =""
-                binding.k3.text =""
-                binding.k4.text =""
-                binding.o2.text =""
-                binding.o3.text =""
-                binding.v12.text = ""
-                binding.v13.text = ""
-                binding.v22.text = ""
-                binding.v23.text = ""
-                binding.loa1.text = ""
-                binding.loa2.text = ""
-                binding.loa3.text = ""
-                binding.lob1.text = ""
-                binding.lob2.text = ""
-                binding.lob3.text = ""
-                binding.loc1.text = ""
-                binding.loc2.text = ""
-                binding.loc3.text = ""
-                binding.lod1.text = ""
-                binding.lod2.text = ""
-                binding.lod3.text = ""
+               clearData1()
             }
         })
+    }
+
+    private fun clearData1() {
+        binding.tvA2.text =""
+        binding.tvA3.text =""
+        binding.tvA4.text =""
+        binding.b2.text =""
+        binding.b3.text =""
+        binding.b4.text =""
+        binding.c2.text =""
+        binding.c3.text =""
+        binding.d2.text =""
+        binding.d3.text =""
+        binding.f2.text =""
+        binding.f3.text =""
+        binding.f4.text =""
+        binding.n2.text =""
+        binding.n3.text =""
+        binding.n4.text =""
+        binding.i2.text =""
+        binding.i3.text =""
+        binding.i4.text =""
+        binding.l2.text = ""
+        binding.l3.text = ""
+        binding.l4.text = ""
+        binding.k2.text =""
+        binding.k3.text =""
+        binding.k4.text =""
+        binding.o2.text =""
+        binding.o3.text =""
+        binding.v12.text = ""
+        binding.v13.text = ""
+        binding.v22.text = ""
+        binding.v23.text = ""
+        binding.loa1.text = ""
+        binding.loa2.text = ""
+        binding.loa3.text = ""
+        binding.lob1.text = ""
+        binding.lob2.text = ""
+        binding.lob3.text = ""
+        binding.loc1.text = ""
+        binding.loc2.text = ""
+        binding.loc3.text = ""
+        binding.lod1.text = ""
+        binding.lod2.text = ""
+        binding.lod3.text = ""
+
+    }
+
+    private fun clearData2(){
+        binding.aa2.text =""
+        binding.aa3.text =""
+        binding.ab2.text =""
+        binding.ab3.text =""
+        binding.ac2.text =""
+        binding.ac3.text =""
+        binding.ad2.text =""
+        binding.bb2.text = ""
+        binding.bb3.text = ""
+        binding.bb4.text = ""
+        binding.cc2.text = ""
+        binding.cc3.text = ""
+        binding.dd2.text = ""
+        binding.dd3.text = ""
+        binding.loaa1.text =""
+        binding.loaa2.text =""
+        binding.loaa3.text =""
+        binding.lobb1.text =""
+        binding.lobb2.text =""
+        binding.lobb3.text =""
+        binding.locc1.text =""
+        binding.locc2.text =""
+        binding.locc3.text =""
+        binding.lodd1.text =""
+        binding.lodd2.text =""
+        binding.lodd3.text =""
+        binding.loee1.text =""
+        binding.loee2.text =""
+        binding.loee3.text =""
+        binding.loff1.text =""
+        binding.loff2.text =""
+        binding.loff3.text =""
+        binding.logg1.text =""
+        binding.logg2.text =""
+        binding.logg3.text =""
     }
     @SuppressLint("SetTextI18n")
     private fun getData615(binding: FragmentLotteryVnOldBinding, day: Long) {
         binding.tvDateTime2.text = "ថ្ងៃ ${Utils.getDay(day)} ម៉ោង 06:15"
-        FirebaseHelper.getDataVN2(Utils.getYesterday(),object : FirebaseHelper.OnGetVN2CallBack{
+        clearData2()
+        FirebaseHelper.getDataVN2(Utils.getDay(day),object : FirebaseHelper.OnGetVN2CallBack{
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryVN2Model) {
               //  binding.tvDateTime2.text = "ថ្ងៃ ${data.date} ម៉ោង 06:10"
@@ -239,41 +291,7 @@ class LotteryVnOldFragment : Fragment() {
                     val intent = Intent(context, LotteryVN2Activity::class.java)
                     context!!.startActivity(intent)
                 }
-                binding.aa2.text =""
-                binding.aa3.text =""
-                binding.ab2.text =""
-                binding.ab3.text =""
-                binding.ac2.text =""
-                binding.ac3.text =""
-                binding.ad2.text =""
-                binding.bb2.text = ""
-                binding.bb3.text = ""
-                binding.bb4.text = ""
-                binding.cc2.text = ""
-                binding.cc3.text = ""
-                binding.dd2.text = ""
-                binding.dd3.text = ""
-                binding.loaa1.text =""
-                binding.loaa2.text =""
-                binding.loaa3.text =""
-                binding.lobb1.text =""
-                binding.lobb2.text =""
-                binding.lobb3.text =""
-                binding.locc1.text =""
-                binding.locc2.text =""
-                binding.locc3.text =""
-                binding.lodd1.text =""
-                binding.lodd2.text =""
-                binding.lodd3.text =""
-                binding.loee1.text =""
-                binding.loee2.text =""
-                binding.loee3.text =""
-                binding.loff1.text =""
-                binding.loff2.text =""
-                binding.loff3.text =""
-                binding.logg1.text =""
-                binding.logg2.text =""
-                binding.logg3.text =""
+               clearData2()
             }
         })
     }

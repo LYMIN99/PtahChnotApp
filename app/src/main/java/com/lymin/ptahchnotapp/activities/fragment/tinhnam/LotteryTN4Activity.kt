@@ -26,9 +26,14 @@ class LotteryTN4Activity : AppCompatActivity() {
 
             binding.tvDateTime4.text = "ថ្ងៃ ${data.date} ម៉ោង ${data.time}"
 
-            binding.tvAaaa2.text = data.a2
-            binding.tvAaaa3.text = data.a3
-            binding.tvAaaa4.text = data.a4
+        binding.aaaa2.text = data.a2
+        binding.aaaa3.text = data.a3
+
+        binding.aaab2.text = data.ab2
+        binding.aaab3.text = data.ab3
+        binding.aaac2.text = data.ac2
+        binding.aaac3.text = data.ac3
+        binding.aaad2.text = data.ad2
 
             binding.bbbb2.text = data.b2
             binding.bbbb3.text = data.b3
@@ -56,8 +61,15 @@ class LotteryTN4Activity : AppCompatActivity() {
             binding.lodddd2.text = data.lod2
             binding.lodddd3.text = data.lod3
 
-            binding.loeeee1.text = data.loe1
-            binding.loeeee2.text = data.loe2
+        binding.loeeee1.text = data.loe1
+        binding.loeeee2.text = data.loe2
+        binding.loeeee3.text = data.loe3
+
+        binding.loffff1.text = data.lof1
+        binding.loffff2.text = data.lof2
+        binding.loffff3.text = data.lof3
+
+        binding.logggg1.text = data.log1
 
     }
 

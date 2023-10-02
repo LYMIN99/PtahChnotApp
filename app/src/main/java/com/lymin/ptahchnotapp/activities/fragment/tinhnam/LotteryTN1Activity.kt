@@ -84,7 +84,7 @@ class LotteryTN1Activity : AppCompatActivity() {
             binding.lod3.text = data.lod3
 
             binding.loe1.text = data.loe1
-            binding.loa2.text = data.loe2
+            binding.loe2.text = data.loe2
 
     }
 
