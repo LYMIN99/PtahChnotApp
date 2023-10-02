@@ -446,6 +446,49 @@
                     android:layout_height="1dp"
                     android:background="@color/yellow_700"/>
 
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="30dp"
+                        android:textColor="#FFFFFF"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:text="Z"/>
+
+                    <TextView
+                        android:id="@+id/z2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        />
+
+                    <TextView
+                        android:id="@+id/z3"
+                        android:layout_width="@dimen/spacing_xxXlarge"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        />
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/yellow_700"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -496,48 +539,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/yellow_700"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="2dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginStart="30dp"
-                        android:textColor="#FFFFFF"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="Z"/>
-
-                    <TextView
-                        android:id="@+id/z2"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
-
-                    <TextView
-                        android:id="@+id/z3"
-                        android:layout_width="@dimen/spacing_xxXlarge"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:layout_marginStart="10dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
-
-
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/yellow_700"/>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -1220,6 +1221,46 @@
                         android:layout_marginStart="30dp"
                         android:textColor="#FFFFFF"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:text="Z"/>
+
+                    <TextView
+                        android:id="@+id/zz2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        />
+
+                    <TextView
+                        android:id="@+id/zz3"
+                        android:layout_width="@dimen/spacing_xxXlarge"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        />
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/yellow_700"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="30dp"
+                        android:textColor="#FFFFFF"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:text="P"/>
 
                     <TextView
@@ -1251,47 +1292,6 @@
                         android:layout_marginStart="30dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         />
-
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/yellow_700"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="2dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginStart="30dp"
-                        android:textColor="#FFFFFF"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="Z"/>
-
-                    <TextView
-                        android:id="@+id/zz2"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
-
-                    <TextView
-                        android:id="@+id/zz3"
-                        android:layout_width="@dimen/spacing_xxXlarge"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:layout_marginStart="10dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
-
 
                 </LinearLayout>
                 <View
@@ -1967,6 +1967,49 @@
                     android:layout_height="1dp"
                     android:background="@color/yellow_700"/>
 
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="30dp"
+                        android:textColor="#FFFFFF"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        android:text="Z"/>
+
+                    <TextView
+                        android:id="@+id/zzz2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        />
+
+                    <TextView
+                        android:id="@+id/zzz3"
+                        android:layout_width="@dimen/spacing_xxXlarge"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        />
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/yellow_700"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -2017,48 +2060,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/yellow_700"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:padding="2dp"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="30dp"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:layout_marginStart="30dp"
-                        android:textColor="#FFFFFF"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:text="Z"/>
-
-                    <TextView
-                        android:id="@+id/zzz2"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
-
-                    <TextView
-                        android:id="@+id/zzz3"
-                        android:layout_width="@dimen/spacing_xxXlarge"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:layout_marginStart="10dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
-
-
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="@color/yellow_700"/>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
@@ -2323,11 +2324,11 @@
                         android:text="ថ្ងៃ -- ម៉ោង 6:15"/>
 
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="horizontal"
                     android:padding="2dp"
+                    android:gravity="center_vertical"
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -2335,38 +2336,165 @@
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
                         android:layout_marginStart="30dp"
-                        android:textColor="#FFFFFF"
+                        android:textColor="@color/white"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
                         android:text="A"/>
 
-                    <TextView
-                        android:id="@+id/tv_aaaa2"
-                        android:layout_width="50dp"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tv_aaaa3"
-                        android:layout_width="@dimen/spacing_xxXlarge"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:layout_marginStart="10dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:layout_height="wrap_content">
 
-                    <TextView
-                        android:id="@+id/tv_aaaa4"
-                        android:layout_width="@dimen/spacing_xxXlarge"
-                        android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
-                        android:textStyle="bold"
-                        android:layout_marginStart="30dp"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        />
+
+                            <TextView
+                                android:id="@+id/aaaa2"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                            <TextView
+                                android:id="@+id/aaaa3"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="10dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="16dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:id="@+id/aaab2"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                            <TextView
+                                android:id="@+id/aaab3"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="10dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="16dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:id="@+id/aaac2"
+                                android:layout_width="50dp"
+                                android:layout_height="31dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/aaac3"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="10dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="16dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:padding="2dp"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:id="@+id/aaad2"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="10dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                            <TextView
+                                android:visibility="invisible"
+                                android:layout_width="@dimen/spacing_xxXlarge"
+                                android:layout_height="wrap_content"
+                                android:textColor="#FF9800"
+                                android:textStyle="bold"
+                                android:layout_marginStart="16dp"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
                 <View

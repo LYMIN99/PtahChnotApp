@@ -412,7 +412,7 @@ class LotteryTinhnamFragment : Fragment() {
         })
     }
     private fun getData615(binding: FragmentLotteryTinhnameBinding, day: Long) {
-        binding.tvDateTime4.text = "ថ្ងៃ ${Utils.getDay(day)} ម៉ោង 10:15"
+        binding.tvDateTime4.text = "ថ្ងៃ ${Utils.getDay(day)} ម៉ោង 6:15"
 
         FirebaseHelper.getDataTN4(Utils.getDay(day),object : FirebaseHelper.OnGetTN4CallBack{
             @SuppressLint("SetTextI18n")
@@ -423,9 +423,14 @@ class LotteryTinhnamFragment : Fragment() {
                     context!!.startActivity(intent)
                 }
 
-                binding.tvAaaa2.text = data.a2
-                binding.tvAaaa3.text = data.a3
-                binding.tvAaaa4.text = data.a4
+                binding.aaaa2.text = data.a2
+                binding.aaaa3.text = data.a3
+
+                binding.aaab2.text = data.ab2
+                binding.aaab3.text = data.ab3
+                binding.aaac2.text = data.ac2
+                binding.aaac3.text = data.ac3
+                binding.aaad2.text = data.ad2
 
                 binding.bbbb2.text = data.b2
                 binding.bbbb3.text = data.b3
@@ -462,9 +467,14 @@ class LotteryTinhnamFragment : Fragment() {
                     val intent = Intent(context, LotteryTN4Activity::class.java)
                     context!!.startActivity(intent)
                 }
-                binding.tvAaaa2.text = ""
-                binding.tvAaaa3.text = ""
-                binding.tvAaaa4.text = ""
+                binding.aaaa2.text = ""
+                binding.aaaa3.text = ""
+
+                binding.aaab2.text = ""
+                binding.aaab3.text = ""
+                binding.aaac2.text = ""
+                binding.aaac3.text = ""
+                binding.aaad2.text = ""
                 binding.bbbb2.text = ""
                 binding.bbbb3.text = ""
                 binding.bbbb4.text = ""

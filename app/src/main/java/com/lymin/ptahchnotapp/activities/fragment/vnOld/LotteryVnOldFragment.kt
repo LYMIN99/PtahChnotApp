@@ -174,7 +174,7 @@ class LotteryVnOldFragment : Fragment() {
     }
     @SuppressLint("SetTextI18n")
     private fun getData615(binding: FragmentLotteryVnOldBinding, day: Long) {
-        binding.tvDateTime2.text = "ថ្ងៃ ${Utils.getDay(day)} ម៉ោង 06:10"
+        binding.tvDateTime2.text = "ថ្ងៃ ${Utils.getDay(day)} ម៉ោង 06:15"
         FirebaseHelper.getDataVN2(Utils.getYesterday(),object : FirebaseHelper.OnGetVN2CallBack{
             @SuppressLint("SetTextI18n")
             override fun onSuccess(data: LotteryVN2Model) {

@@ -2,14 +2,19 @@ package com.lymin.ptahchnotapp.model
 
 import java.io.Serializable
 
-class LotteryTN4Model : Serializable {
+class LotteryTN4Model : Serializable{
     var id : String? = null
     var date: String? = null
     var time: String? = null
 
     var a2 : String? = null
     var a3 : String? = null
-    var a4 : String? = null
+
+    var ab2 : String? = null
+    var ab3 : String? = null
+    var ac2 : String? = null
+    var ac3 : String? = null
+    var ad2 : String? = null
 
     var b2 : String? = null
     var b3 : String? = null
@@ -47,7 +52,11 @@ class LotteryTN4Model : Serializable {
         time: String?,
         a2: String?,
         a3: String?,
-        a4: String?,
+        ab2: String?,
+        ab3: String?,
+        ac2: String?,
+        ac3: String?,
+        ad2: String?,
         b2: String?,
         b3: String?,
         b4: String?,
@@ -75,7 +84,11 @@ class LotteryTN4Model : Serializable {
         this.time = time
         this.a2 = a2
         this.a3 = a3
-        this.a4 = a4
+        this.ab2 = ab2
+        this.ab3 = ab3
+        this.ac2 = ac2
+        this.ac3 = ac3
+        this.ad2 = ad2
         this.b2 = b2
         this.b3 = b3
         this.b4 = b4

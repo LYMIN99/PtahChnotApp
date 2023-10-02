@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.lymin.ptahchnotapp.R
 import com.lymin.ptahchnotapp.databinding.ActivityLotteryTn4Binding
 import com.lymin.ptahchnotapp.model.LotteryTN1Model
+import com.lymin.ptahchnotapp.model.LotteryTN4Model
 
 class LotteryTN4Activity : AppCompatActivity() {
     lateinit var binding: ActivityLotteryTn4Binding
@@ -14,14 +15,14 @@ class LotteryTN4Activity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_lottery_tn4)
 
         initToolBar()
-        val lotteryData = intent.getSerializableExtra("Lottery") as? LotteryTN1Model
+        val lotteryData = intent.getSerializableExtra("Lottery") as? LotteryTN4Model
         if (lotteryData != null) {
             initData(lotteryData)
         }
 
     }
 
-    private fun initData(data: LotteryTN1Model) {
+    private fun initData(data: LotteryTN4Model) {
 
             binding.tvDateTime4.text = "ថ្ងៃ ${data.date} ម៉ោង ${data.time}"
 
